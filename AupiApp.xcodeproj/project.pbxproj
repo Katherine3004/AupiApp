@@ -132,6 +132,8 @@
 		CC7ABC312A685FC7005EB971 /* AupiApp */ = {
 			isa = PBXGroup;
 			children = (
+				CC7ABC952A686672005EB971 /* Extensions */,
+				CC7ABC942A68666B005EB971 /* Coordinator */,
 				CC7ABC612A686093005EB971 /* App */,
 				CC7ABC622A6860A1005EB971 /* Components */,
 				CC7ABC662A6860F4005EB971 /* Firebase */,
@@ -284,6 +286,20 @@
 				CC7ABC7F2A686249005EB971 /* User.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		CC7ABC942A68666B005EB971 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CC7ABC952A686672005EB971 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
