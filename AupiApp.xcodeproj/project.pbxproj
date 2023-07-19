@@ -32,6 +32,7 @@
 		CC7ABC8F2A68633E005EB971 /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CC7ABC8E2A68633E005EB971 /* FirebaseInAppMessagingSwift-Beta */; };
 		CC7ABC912A68633E005EB971 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CC7ABC902A68633E005EB971 /* FirebaseMessaging */; };
 		CC7ABC932A68633E005EB971 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CC7ABC922A68633E005EB971 /* FirebaseStorage */; };
+		CC7ABC9C2A6869C1005EB971 /* User+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABC9B2A6869C1005EB971 /* User+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		CC7ABC792A6861E2005EB971 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		CC7ABC7C2A68622C005EB971 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		CC7ABC7F2A686249005EB971 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CC7ABC9B2A6869C1005EB971 /* User+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,17 +134,17 @@
 		CC7ABC312A685FC7005EB971 /* AupiApp */ = {
 			isa = PBXGroup;
 			children = (
-				CC7ABC952A686672005EB971 /* Extensions */,
-				CC7ABC942A68666B005EB971 /* Coordinator */,
+				CC7ABC982A686831005EB971 /* Coordinator */,
+				CC7ABC972A68682A005EB971 /* Extensions */,
 				CC7ABC612A686093005EB971 /* App */,
-				CC7ABC622A6860A1005EB971 /* Components */,
+				CC7ABC992A686839005EB971 /* Components */,
 				CC7ABC662A6860F4005EB971 /* Firebase */,
 				CC7ABC652A6860D8005EB971 /* Model */,
 				CC7ABC392A685FCA005EB971 /* Preview Content */,
 				CC7ABC642A6860CA005EB971 /* Root */,
-				CC7ABC632A6860AD005EB971 /* Style */,
+				CC7ABC9A2A68684F005EB971 /* Style */,
 				CC7ABC5F2A686076005EB971 /* View */,
-				CC7ABC602A686080005EB971 /* ViewModel */,
+				CC7ABC962A68681D005EB971 /* ViewModel */,
 				CC7ABC362A685FCA005EB971 /* Assets.xcassets */,
 				CC7ABC382A685FCA005EB971 /* AupiApp.entitlements */,
 			);
@@ -185,33 +187,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CC7ABC602A686080005EB971 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		CC7ABC612A686093005EB971 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				CC7ABC322A685FC7005EB971 /* AupiAppApp.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		CC7ABC622A6860A1005EB971 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		CC7ABC632A6860AD005EB971 /* Style */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Style;
 			sourceTree = "<group>";
 		};
 		CC7ABC642A6860CA005EB971 /* Root */ = {
@@ -288,18 +269,40 @@
 			path = User;
 			sourceTree = "<group>";
 		};
-		CC7ABC942A68666B005EB971 /* Coordinator */ = {
+		CC7ABC962A68681D005EB971 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CC7ABC972A68682A005EB971 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CC7ABC9B2A6869C1005EB971 /* User+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CC7ABC982A686831005EB971 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		CC7ABC952A686672005EB971 /* Extensions */ = {
+		CC7ABC992A686839005EB971 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Extensions;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CC7ABC9A2A68684F005EB971 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,6 +455,7 @@
 				CC7ABC702A686192005EB971 /* RegisterView.swift in Sources */,
 				CC7ABC722A68619D005EB971 /* ProfileView.swift in Sources */,
 				CC7ABC7A2A6861E2005EB971 /* LandingView.swift in Sources */,
+				CC7ABC9C2A6869C1005EB971 /* User+Extensions.swift in Sources */,
 				CC7ABC752A6861B0005EB971 /* HomeView.swift in Sources */,
 				CC7ABC7D2A68622C005EB971 /* AuthenticationViewModel.swift in Sources */,
 				CC7ABC352A685FC7005EB971 /* ContentView.swift in Sources */,

@@ -5,16 +5,40 @@
 //  Created by Katherine Chambers on 2023/07/19.
 //
 
-import SwiftUI
+import Foundation
 
-struct User: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct User: Identifiable, Codable {
+    
+    let id: String
+    let firstname: String
+    let lastname: String
+    let email: String
+    let dob: Date?
+    let gender: String?
+    let location: String?
+//    let profilePicture:
+//    let cv:
+    
+    
+    init(id: String,
+         firstname: String,
+         lastname: String,
+         email: String,
+         dob: Date? = nil,
+         gender: String? = nil,
+         location: String? = nil) {
+        self.id = id
+        self.firstname = firstname
+        self.lastname = lastname
+        self.email = email
+        self.dob = dob
+        self.gender = gender
+        self.location = location
     }
-}
-
-struct User_Previews: PreviewProvider {
-    static var previews: some View {
-        User()
+    
+    var initials: String {
+        return "\(firstname.first)\(lastname.first)"
     }
+    
+    
 }
