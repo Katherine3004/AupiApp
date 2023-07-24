@@ -38,6 +38,14 @@ extension Color {
     #FEDEFF
      */
     static let appPink = Color(hex: 0xFEDEFF, alpha: 1)
+    /**
+     #c5656
+     */
+    static let errorRed = Color(hex: 0xc5656, alpha: 1)
+    /**
+     #404040
+     */
+    static let gray2 = Color(hex: 0x404040, alpha: 1)
 }
 
 extension UIColor {
@@ -65,4 +73,12 @@ extension UIColor {
     #FEDEFF
      */
     static let appPink = UIColor(hex: 0xFEDEFF, alpha: 1)
+    /**
+     #c5656
+     */
+    static let errorRed = UIColor(hex: 0xc5656, alpha: 1)
+    /**
+     #404040
+     */
+    static let gray2 = UIColor(hex: 0x404040, alpha: 1)
 }

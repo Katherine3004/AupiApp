@@ -44,6 +44,9 @@
 		CCA8D9A02A6EFDD700DB9451 /* DefaultTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D99F2A6EFDD700DB9451 /* DefaultTextInput.swift */; };
 		CCA8D9A32A6F049000DB9451 /* TextInputRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D9A22A6F049000DB9451 /* TextInputRules.swift */; };
 		CCA8D9A52A6F051300DB9451 /* String+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D9A42A6F051300DB9451 /* String+Extentions.swift */; };
+		CCA8D9A92A6F085F00DB9451 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D9A82A6F085F00DB9451 /* ButtonStyle.swift */; };
+		CCA8D9AC2A6F089100DB9451 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D9AB2A6F089100DB9451 /* Checkbox.swift */; };
+		CCA8D9AF2A6F089200DB9451 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D9AE2A6F089100DB9451 /* RoundedCorners.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,9 @@
 		CCA8D99F2A6EFDD700DB9451 /* DefaultTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextInput.swift; sourceTree = "<group>"; };
 		CCA8D9A22A6F049000DB9451 /* TextInputRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputRules.swift; sourceTree = "<group>"; };
 		CCA8D9A42A6F051300DB9451 /* String+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extentions.swift"; sourceTree = "<group>"; };
+		CCA8D9A82A6F085F00DB9451 /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		CCA8D9AB2A6F089100DB9451 /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		CCA8D9AE2A6F089100DB9451 /* RoundedCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,7 +328,10 @@
 		CC7ABC992A686839005EB971 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				CCA8D99F2A6EFDD700DB9451 /* DefaultTextInput.swift */,
+				CCA8D9AA2A6F089100DB9451 /* Checkbox */,
+				CCA8D9AD2A6F089100DB9451 /* RoundedCorners */,
+				CCA8D9A72A6F082000DB9451 /* Button */,
+				CCA8D9A62A6F081500DB9451 /* TextInput */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -346,6 +355,38 @@
 				CCA8D9A22A6F049000DB9451 /* TextInputRules.swift */,
 			);
 			path = Rules;
+			sourceTree = "<group>";
+		};
+		CCA8D9A62A6F081500DB9451 /* TextInput */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8D99F2A6EFDD700DB9451 /* DefaultTextInput.swift */,
+			);
+			path = TextInput;
+			sourceTree = "<group>";
+		};
+		CCA8D9A72A6F082000DB9451 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8D9A82A6F085F00DB9451 /* ButtonStyle.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		CCA8D9AA2A6F089100DB9451 /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8D9AB2A6F089100DB9451 /* Checkbox.swift */,
+			);
+			path = Checkbox;
+			sourceTree = "<group>";
+		};
+		CCA8D9AD2A6F089100DB9451 /* RoundedCorners */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8D9AE2A6F089100DB9451 /* RoundedCorners.swift */,
+			);
+			path = RoundedCorners;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,13 +542,16 @@
 				CC7ABC772A6861BE005EB971 /* ChatLandingView.swift in Sources */,
 				CCA8D9A32A6F049000DB9451 /* TextInputRules.swift in Sources */,
 				CC7ABCAC2A686D25005EB971 /* Coordinator.swift in Sources */,
+				CCA8D9AC2A6F089100DB9451 /* Checkbox.swift in Sources */,
 				CC7ABC702A686192005EB971 /* RegisterView.swift in Sources */,
 				CC7ABC722A68619D005EB971 /* ProfileView.swift in Sources */,
+				CCA8D9A92A6F085F00DB9451 /* ButtonStyle.swift in Sources */,
 				CC7ABC7A2A6861E2005EB971 /* LandingView.swift in Sources */,
 				CCA8D9A52A6F051300DB9451 /* String+Extentions.swift in Sources */,
 				CC7ABC9C2A6869C1005EB971 /* User+Extensions.swift in Sources */,
 				CC7ABC752A6861B0005EB971 /* HomeView.swift in Sources */,
 				CC7ABC7D2A68622C005EB971 /* AuthenticationViewModel.swift in Sources */,
+				CCA8D9AF2A6F089200DB9451 /* RoundedCorners.swift in Sources */,
 				CC7ABCA82A686CE6005EB971 /* Colors.swift in Sources */,
 				CC7ABC352A685FC7005EB971 /* ContentView.swift in Sources */,
 				CCA8D9A02A6EFDD700DB9451 /* DefaultTextInput.swift in Sources */,
