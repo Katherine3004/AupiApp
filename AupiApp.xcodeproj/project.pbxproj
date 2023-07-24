@@ -33,6 +33,17 @@
 		CC7ABC912A68633E005EB971 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CC7ABC902A68633E005EB971 /* FirebaseMessaging */; };
 		CC7ABC932A68633E005EB971 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CC7ABC922A68633E005EB971 /* FirebaseStorage */; };
 		CC7ABC9C2A6869C1005EB971 /* User+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABC9B2A6869C1005EB971 /* User+Extensions.swift */; };
+		CC7ABCA32A686CE6005EB971 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC7ABC9D2A686CE5005EB971 /* Nunito-Bold.ttf */; };
+		CC7ABCA42A686CE6005EB971 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC7ABC9E2A686CE5005EB971 /* Nunito-Regular.ttf */; };
+		CC7ABCA52A686CE6005EB971 /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC7ABC9F2A686CE5005EB971 /* Nunito-Medium.ttf */; };
+		CC7ABCA62A686CE6005EB971 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC7ABCA02A686CE5005EB971 /* Nunito-SemiBold.ttf */; };
+		CC7ABCA72A686CE6005EB971 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABCA12A686CE5005EB971 /* Typography.swift */; };
+		CC7ABCA82A686CE6005EB971 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABCA22A686CE6005EB971 /* Colors.swift */; };
+		CC7ABCAA2A686D0C005EB971 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABCA92A686D0C005EB971 /* UIColor+Extensions.swift */; };
+		CC7ABCAC2A686D25005EB971 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABCAB2A686D25005EB971 /* Coordinator.swift */; };
+		CCA8D9A02A6EFDD700DB9451 /* DefaultTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D99F2A6EFDD700DB9451 /* DefaultTextInput.swift */; };
+		CCA8D9A32A6F049000DB9451 /* TextInputRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D9A22A6F049000DB9451 /* TextInputRules.swift */; };
+		CCA8D9A52A6F051300DB9451 /* String+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D9A42A6F051300DB9451 /* String+Extentions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +85,18 @@
 		CC7ABC7C2A68622C005EB971 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		CC7ABC7F2A686249005EB971 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CC7ABC9B2A6869C1005EB971 /* User+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Extensions.swift"; sourceTree = "<group>"; };
+		CC7ABC9D2A686CE5005EB971 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		CC7ABC9E2A686CE5005EB971 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		CC7ABC9F2A686CE5005EB971 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		CC7ABCA02A686CE5005EB971 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		CC7ABCA12A686CE5005EB971 /* Typography.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		CC7ABCA22A686CE6005EB971 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CC7ABCA92A686D0C005EB971 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		CC7ABCAB2A686D25005EB971 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CC7ABCAD2A686FFD005EB971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CCA8D99F2A6EFDD700DB9451 /* DefaultTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextInput.swift; sourceTree = "<group>"; };
+		CCA8D9A22A6F049000DB9451 /* TextInputRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputRules.swift; sourceTree = "<group>"; };
+		CCA8D9A42A6F051300DB9451 /* String+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extentions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,10 +157,11 @@
 		CC7ABC312A685FC7005EB971 /* AupiApp */ = {
 			isa = PBXGroup;
 			children = (
+				CCA8D9A12A6F047F00DB9451 /* Rules */,
 				CC7ABC982A686831005EB971 /* Coordinator */,
 				CC7ABC972A68682A005EB971 /* Extensions */,
 				CC7ABC612A686093005EB971 /* App */,
-				CC7ABC992A686839005EB971 /* Components */,
+				CC7ABC992A686839005EB971 /* Controls */,
 				CC7ABC662A6860F4005EB971 /* Firebase */,
 				CC7ABC652A6860D8005EB971 /* Model */,
 				CC7ABC392A685FCA005EB971 /* Preview Content */,
@@ -145,6 +169,7 @@
 				CC7ABC9A2A68684F005EB971 /* Style */,
 				CC7ABC5F2A686076005EB971 /* View */,
 				CC7ABC962A68681D005EB971 /* ViewModel */,
+				CC7ABCAD2A686FFD005EB971 /* Info.plist */,
 				CC7ABC362A685FCA005EB971 /* Assets.xcassets */,
 				CC7ABC382A685FCA005EB971 /* AupiApp.entitlements */,
 			);
@@ -279,7 +304,9 @@
 		CC7ABC972A68682A005EB971 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CC7ABCA92A686D0C005EB971 /* UIColor+Extensions.swift */,
 				CC7ABC9B2A6869C1005EB971 /* User+Extensions.swift */,
+				CCA8D9A42A6F051300DB9451 /* String+Extentions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -287,22 +314,38 @@
 		CC7ABC982A686831005EB971 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				CC7ABCAB2A686D25005EB971 /* Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		CC7ABC992A686839005EB971 /* Components */ = {
+		CC7ABC992A686839005EB971 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				CCA8D99F2A6EFDD700DB9451 /* DefaultTextInput.swift */,
 			);
-			path = Components;
+			path = Controls;
 			sourceTree = "<group>";
 		};
 		CC7ABC9A2A68684F005EB971 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				CC7ABCA22A686CE6005EB971 /* Colors.swift */,
+				CC7ABCA12A686CE5005EB971 /* Typography.swift */,
+				CC7ABC9D2A686CE5005EB971 /* Nunito-Bold.ttf */,
+				CC7ABC9F2A686CE5005EB971 /* Nunito-Medium.ttf */,
+				CC7ABC9E2A686CE5005EB971 /* Nunito-Regular.ttf */,
+				CC7ABCA02A686CE5005EB971 /* Nunito-SemiBold.ttf */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		CCA8D9A12A6F047F00DB9451 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8D9A22A6F049000DB9451 /* TextInputRules.swift */,
+			);
+			path = Rules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,8 +466,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC7ABCA62A686CE6005EB971 /* Nunito-SemiBold.ttf in Resources */,
+				CC7ABCA42A686CE6005EB971 /* Nunito-Regular.ttf in Resources */,
 				CC7ABC3B2A685FCA005EB971 /* Preview Assets.xcassets in Resources */,
+				CC7ABCA52A686CE6005EB971 /* Nunito-Medium.ttf in Resources */,
 				CC7ABC5E2A686053005EB971 /* GoogleService-Info.plist in Resources */,
+				CC7ABCA32A686CE6005EB971 /* Nunito-Bold.ttf in Resources */,
 				CC7ABC372A685FCA005EB971 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,14 +499,21 @@
 			files = (
 				CC7ABC6E2A686188005EB971 /* SignInView.swift in Sources */,
 				CC7ABC772A6861BE005EB971 /* ChatLandingView.swift in Sources */,
+				CCA8D9A32A6F049000DB9451 /* TextInputRules.swift in Sources */,
+				CC7ABCAC2A686D25005EB971 /* Coordinator.swift in Sources */,
 				CC7ABC702A686192005EB971 /* RegisterView.swift in Sources */,
 				CC7ABC722A68619D005EB971 /* ProfileView.swift in Sources */,
 				CC7ABC7A2A6861E2005EB971 /* LandingView.swift in Sources */,
+				CCA8D9A52A6F051300DB9451 /* String+Extentions.swift in Sources */,
 				CC7ABC9C2A6869C1005EB971 /* User+Extensions.swift in Sources */,
 				CC7ABC752A6861B0005EB971 /* HomeView.swift in Sources */,
 				CC7ABC7D2A68622C005EB971 /* AuthenticationViewModel.swift in Sources */,
+				CC7ABCA82A686CE6005EB971 /* Colors.swift in Sources */,
 				CC7ABC352A685FC7005EB971 /* ContentView.swift in Sources */,
+				CCA8D9A02A6EFDD700DB9451 /* DefaultTextInput.swift in Sources */,
 				CC7ABC802A686249005EB971 /* User.swift in Sources */,
+				CC7ABCAA2A686D0C005EB971 /* UIColor+Extensions.swift in Sources */,
+				CC7ABCA72A686CE6005EB971 /* Typography.swift in Sources */,
 				CC7ABC332A685FC7005EB971 /* AupiAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,6 +671,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AupiApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AupiApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -653,6 +709,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AupiApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AupiApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
