@@ -8,5 +8,5 @@
 import Foundation
 
 extension User {
-    static var MOCK_USER = User(id: "1", firstname: "Katherine", lastname: "Chambers", email: "Katherine@yopmail.com")
+    static var MOCK_USER = User(id: "1", firstname: "Katherine", lastname: "Chambers", email: "Katherine@yopmail.com", isAupair: true)
 }

@@ -50,6 +50,7 @@ struct DefaultTextInput: View {
         VStack(alignment: .leading, spacing: 4) {
             Text(placeholder)
                 .font(.body16SemiBold)
+                .foregroundColor(Color.gray3)
             TextField(placeholder, text: $vm.text)
                 .focused($isFocused)
                 .padding(10)
@@ -58,7 +59,7 @@ struct DefaultTextInput: View {
                 .font(.body14)
                 .overlay(
                     RoundedRectangle(cornerRadius: 5)
-                        .stroke(isFocused ? Color.mediumBlue : Color.gray2, lineWidth: 1)
+                        .stroke(isFocused ? Color.mediumBlue : Color.gray5, lineWidth: 1)
                 )
                 .onTapGesture {
                     withAnimation {

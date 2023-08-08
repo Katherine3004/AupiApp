@@ -1,6 +1,6 @@
 //
 //  Colors.swift
-//  Aupi
+//  AupiApp
 //
 //  Created by Katherine Chambers on 2023/03/03.
 //
@@ -43,6 +43,18 @@ extension Color {
      */
     static let errorRed = Color(hex: 0xc5656, alpha: 1)
     /**
+     #8f8f8f
+     */
+    static let gray5 = Color(hex: 0x8f8f8f, alpha: 1)
+    /**
+     #707070
+     */
+    static let gray4 = Color(hex: 0x707070, alpha: 1)
+    /**
+     #5c5c5c
+     */
+    static let gray3 = Color(hex: 0x5c5c5c, alpha: 1)
+    /**
      #404040
      */
     static let gray2 = Color(hex: 0x404040, alpha: 1)
@@ -77,6 +89,18 @@ extension UIColor {
      #c5656
      */
     static let errorRed = UIColor(hex: 0xc5656, alpha: 1)
+    /**
+     #8f8f8f
+     */
+    static let gray5 = UIColor(hex: 0x8f8f8f, alpha: 1)
+    /**
+     #707070
+     */
+    static let gray4 = UIColor(hex: 0x707070, alpha: 1)
+    /**
+     #5c5c5c
+     */
+    static let gray3 = UIColor(hex: 0x5c5c5c, alpha: 1)
     /**
      #404040
      */

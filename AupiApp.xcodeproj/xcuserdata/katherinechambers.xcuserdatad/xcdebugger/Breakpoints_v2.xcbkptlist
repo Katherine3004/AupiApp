@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B9BC7E34-02F8-4C99-8BF9-F428BBC79677"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A1921F9-3A94-4070-8D9E-9A9F98A74794"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AupiApp/Firebase/Authentication/AuthenticationViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "createUser(withEmail:password:firstname:lastname:isAupair:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7A1921F9-3A94-4070-8D9E-9A9F98A74794 - ffc79e81a54a9a6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AupiApp.AuthenticationViewModel.createUser(withEmail: Swift.String, password: Swift.String, firstname: Swift.String, lastname: Swift.String, isAupair: Swift.Bool) async throws -&gt; ()"
+                  moduleName = "AupiApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/katherinechambers/Projects/AupiApp/AupiApp/Firebase/Authentication/AuthenticationViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "656">
+               </Location>
+               <Location
+                  uuid = "7A1921F9-3A94-4070-8D9E-9A9F98A74794 - 8450a6a98c186827"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for AupiApp.AuthenticationViewModel.createUser(withEmail: Swift.String, password: Swift.String, firstname: Swift.String, lastname: Swift.String, isAupair: Swift.Bool) async throws -&gt; ()"
+                  moduleName = "AupiApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/katherinechambers/Projects/AupiApp/AupiApp/Firebase/Authentication/AuthenticationViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

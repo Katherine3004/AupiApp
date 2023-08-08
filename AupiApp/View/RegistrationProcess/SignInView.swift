@@ -51,6 +51,7 @@ struct SignInView: View {
             Group {
                 Text("Sign In")
                     .font(.h1)
+                    .foregroundColor(Color(hex: 0x2b0a47, alpha: 1))
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding(.vertical, 36)
                 
@@ -73,6 +74,15 @@ struct SignInView: View {
                     Text("Sign In")
                 })
                 .disabled(!formIsValid)
+                .foregroundColor(Color.white)
+                .frame(maxWidth: .infinity)
+                .frame(height: 48)
+                .background(
+                    RoundedRectangle(cornerRadius: 16)
+                        .fill(Color(hex: 0x684d80, alpha: 1))
+                        .shadow(color: .black.opacity(0.2), radius: 4, x: 0, y: 4)
+                )
+                .padding(.horizontal, 24)
                 
                 Spacer()
                 
@@ -84,13 +94,14 @@ struct SignInView: View {
                         Text("Don't have an account?")
                             .font(.caption12)
                             .foregroundColor(.gray2)
-                        Text("Sign up")
+                        Text("Register")
                             .font(.caption12Medium)
                             .foregroundColor(.gray2)
                     }
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(.bottom, 32)
         }
     }
     

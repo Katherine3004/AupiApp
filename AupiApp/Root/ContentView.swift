@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var viewModel: AuthenticationViewModel
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, katherine!")
+        Group {
+            if viewModel.userSession != nil {
+                HomeView()
+            }
+            else {
+                SignInView()
+            }
         }
-        .padding()
     }
 }
 

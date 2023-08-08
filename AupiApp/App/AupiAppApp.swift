@@ -11,6 +11,8 @@ import Firebase
 @main
 struct AupiAppApp: App {
     
+    @StateObject var viewModel = AuthenticationViewModel()
+    
     init() {
         FirebaseApp.configure()
     }
@@ -18,6 +20,7 @@ struct AupiAppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
         }
     }
 }

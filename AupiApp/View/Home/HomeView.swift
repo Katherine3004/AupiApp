@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @EnvironmentObject var viewModel: AuthenticationViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Sign out")
+                .onTapGesture {
+                    Task {
+                        viewModel.signOut()
+                    }
+                }
+        }
     }
 }
 

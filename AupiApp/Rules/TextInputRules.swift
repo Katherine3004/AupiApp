@@ -32,4 +32,5 @@ struct ValidationRules {
         ({ $0.containsUppercaseLetter }, "Password must contain a capital letter"),
         ({ $0.containsNumber }, "Password must contain a number")
     ]
+    
 }

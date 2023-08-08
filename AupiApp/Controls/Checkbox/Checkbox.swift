@@ -31,6 +31,7 @@ struct Checkbox: View {
             
             Text(title)
                 .font(.body16SemiBold)
+                .foregroundColor(Color.gray2)
         }
         .contentShape(Rectangle())
         .onTapGesture {
