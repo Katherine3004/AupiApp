@@ -35,6 +35,10 @@ extension Color {
      */
     static let mediumPurple = Color(hex: 0xe4d3f2, alpha: 1)
     /**
+     #684d80
+     */
+    static let darkPurple = Color(hex: 0x684d80, alpha: 1)
+    /**
     #FEDEFF
      */
     static let appPink = Color(hex: 0xFEDEFF, alpha: 1)
@@ -58,6 +62,10 @@ extension Color {
      #404040
      */
     static let gray2 = Color(hex: 0x404040, alpha: 1)
+    /**
+     #f2f2f2
+     */
+    static let disable = Color(hex: 0xf2f2f2, alpha: 1)
 }
 
 extension UIColor {

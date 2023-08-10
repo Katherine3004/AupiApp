@@ -78,14 +78,7 @@ struct RegisterView: View {
                     Text("Sign Up")
                 })
                 .disabled(!formIsValid)
-                .foregroundColor(Color.black)
-                .frame(maxWidth: .infinity)
-                .frame(height: 48)
-                .background(
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(Color.white)
-                        .shadow(color: .black.opacity(0.2), radius: 4, x: 0, y: 4)
-                )
+                .buttonStyle(PrimaryButtonStyle())
                 .padding(.horizontal, 24)
                 
                 Spacer()

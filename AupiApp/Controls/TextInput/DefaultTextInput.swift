@@ -44,6 +44,9 @@ struct DefaultTextInput: View {
     
     @FocusState private var isFocused: Bool
     
+    @State var isPassword: Bool = false
+    @State var showPassword: Bool = false
+    
     var placeholder: String
     
     var body: some View {
@@ -51,12 +54,32 @@ struct DefaultTextInput: View {
             Text(placeholder)
                 .font(.body16SemiBold)
                 .foregroundColor(Color.gray3)
-            TextField(placeholder, text: $vm.text)
-                .focused($isFocused)
-                .padding(10)
-                .background(Color.white)
-                .cornerRadius(5)
-                .font(.body14)
+            
+            if isPassword == true {
+                HStack(alignment: .center, spacing: 0) {
+                    if showPassword == true {
+                        TextField(placeholder, text: $vm.text)
+                            .focused($isFocused)
+                            .font(.body16)
+                    }
+                    else {
+                        SecureField(placeholder, text: $vm.text)
+                            .focused($isFocused)
+                            .font(.body16)
+                    }
+                    
+                    Image(systemName: showPassword ? "eye.slash" : "eye")
+                        .foregroundColor(Color.gray3)
+                        .onTapGesture {
+                            showPassword.toggle()
+                        }
+                }
+                .frame(height: 30)
+                .padding(.all, 10)
+                .background(
+                    RoundedRectangle(cornerRadius: 5)
+                        .fill(.white)
+                )
                 .overlay(
                     RoundedRectangle(cornerRadius: 5)
                         .stroke(isFocused ? Color.mediumBlue : Color.gray5, lineWidth: 1)
@@ -66,13 +89,34 @@ struct DefaultTextInput: View {
                         isFocused = true
                     }
                 }
-                .autocapitalization(vm.autocapitalization)
+            }
+            else {
+                TextField(placeholder, text: $vm.text)
+                    .focused($isFocused)
+                    .font(.body16)
+                    .frame(height: 30)
+                    .padding(.all, 10)
+                    .background(Color.white)
+                    .cornerRadius(5)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(isFocused ? Color.mediumBlue : Color.gray5, lineWidth: 1)
+                    )
+                    .onTapGesture {
+                        withAnimation {
+                            isFocused = true
+                        }
+                    }
+                    .autocapitalization(.sentences)
+            }
             
-            if !vm.errorMessage.isEmpty {
-                Text(vm.errorMessage)
+//            if !vm.errorMessage.isEmpty {
+                Text(vm.errorMessage ?? "")
                     .font(.caption12)
                     .foregroundColor(.errorRed)
-            }
+                    .frame(height: 12)
+                    .padding(.top, 4)
+//            }
         }
         .onChange(of: vm.text) { _ in
             vm.validate()
@@ -86,7 +130,10 @@ struct DefaultTextInput_Previews: PreviewProvider {
         let vm = DefaultTextFieldViewModel()
         VStack {
             DefaultTextInput(vm: vm, placeholder: "Enter")
-            DefaultTextInput(vm: vm, placeholder: "Enter")
+            DefaultTextInput(vm: vm, isPassword: true, placeholder: "Password")
         }
+        .padding(.horizontal, 24)
+        .frame(maxHeight: UIScreen.main.bounds.height)
+        .background(Color.gray3)
     }
 }

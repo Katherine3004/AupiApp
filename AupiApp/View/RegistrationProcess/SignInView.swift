@@ -47,7 +47,7 @@ struct SignInView: View {
     }
     
     var viewContent: some View {
-        VStack(alignment: .center, spacing: 16) {
+        VStack(alignment: .center, spacing: 12) {
             Group {
                 Text("Sign In")
                     .font(.h1)
@@ -56,7 +56,7 @@ struct SignInView: View {
                     .padding(.vertical, 36)
                 
                 DefaultTextInput(vm: emailValidation, placeholder: "Email Address")
-                DefaultTextInput(vm: passwordValidation, placeholder: "Password")
+                DefaultTextInput(vm: passwordValidation, isPassword: true, placeholder: "Password")
                 
                 Text("Forgot password?")
                     .font(.caption12)
@@ -74,14 +74,7 @@ struct SignInView: View {
                     Text("Sign In")
                 })
                 .disabled(!formIsValid)
-                .foregroundColor(Color.white)
-                .frame(maxWidth: .infinity)
-                .frame(height: 48)
-                .background(
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(Color(hex: 0x684d80, alpha: 1))
-                        .shadow(color: .black.opacity(0.2), radius: 4, x: 0, y: 4)
-                )
+                .buttonStyle(PrimaryButtonStyle())
                 .padding(.horizontal, 24)
                 
                 Spacer()
