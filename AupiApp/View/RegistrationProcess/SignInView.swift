@@ -14,9 +14,6 @@ struct SignInView: View {
     @StateObject private var emailValidation = DefaultTextFieldViewModel(rules: ValidationRules.emailRules)
     @StateObject private var passwordValidation = DefaultTextFieldViewModel(rules: ValidationRules.passwordRules)
     
-    @State private var isAnimating: Bool = false
-    @State private var isContentVisible: Bool = false
-    
     var body: some View {
         NavigationStack {
             ZStack(alignment: .center) {
@@ -58,9 +55,12 @@ struct SignInView: View {
                 DefaultTextInput(vm: emailValidation, placeholder: "Email Address")
                 DefaultTextInput(vm: passwordValidation, isPassword: true, placeholder: "Password")
                 
-                Text("Forgot password?")
-                    .font(.caption12)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
+                Button(action: {  }, label: {
+                    Text("Forgot password?")
+                        .font(.caption12)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                })
+                .buttonStyle(PlainButtonStyle())
             }
         }
     }
@@ -101,6 +101,19 @@ struct SignInView: View {
     func signIn(email: String, password: String) {
         Task {
             try await viewModel.signIn(withEmail: email, password: password)
+        }
+    }
+    
+    func forgotPassword() {
+        Task {
+            do {
+                try await viewModel.forgotPassword(email: emailValidation.text)
+                print("email sent")
+            }
+            catch {
+                //Error Dialog
+                print(error.localizedDescription)
+            }
         }
     }
 }

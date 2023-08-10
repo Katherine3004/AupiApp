@@ -56,6 +56,51 @@ struct PrimaryButtonStyle: ButtonStyle {
     }
 }
 
+struct SecondaryButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        SecondaryButton(configuration: configuration)
+    }
+    
+    struct SecondaryButton: View {
+        let configuration: ButtonStyle.Configuration
+        
+        @Environment(\.isEnabled) private var isEnabled: Bool
+        
+        var body: some View {
+            if #available(iOS 16.0, *) {
+                configuration.label
+                    .font(.body18SemiBold)
+                    .tracking(0.2)
+                    .foregroundColor(isEnabled ? .darkPurple : .mediumPurple)
+                    .padding([.top, .bottom], 12)
+                    .frame(height: 48)
+                    .frame(maxWidth: .infinity)
+                    .contentShape(Rectangle())
+                    .background(
+                        RoundedRectangle(cornerRadius: 8)
+                            .strokeBorder(isEnabled ? configuration.isPressed ? Color.lightPurple : Color.mediumPurple : Color.disable, lineWidth: 2)
+                    )
+                    .scaleEffect(configuration.isPressed ? 0.98 : 1)
+                    .animation(.easeOut(duration: 0.15), value: configuration.isPressed)
+            } else {
+                configuration.label
+                    .font(.body18SemiBold)
+                    .foregroundColor(isEnabled ? .darkPurple : .mediumPurple)
+                    .padding([.top, .bottom], 12)
+                    .frame(height: 48)
+                    .frame(maxWidth: .infinity)
+                    .contentShape(Rectangle())
+                    .background(
+                        RoundedRectangle(cornerRadius: 8)
+                            .strokeBorder(isEnabled ? configuration.isPressed ? Color.lightPurple : Color.mediumPurple : Color.disable, lineWidth: 2)
+                    )
+                    .scaleEffect(configuration.isPressed ? 0.98 : 1)
+                    .animation(.easeOut(duration: 0.15), value: configuration.isPressed)
+            }
+        }
+    }
+}
+
 struct ExploreCardButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         if #available(iOS 16.0, *) {

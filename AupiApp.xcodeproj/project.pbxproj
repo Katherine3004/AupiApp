@@ -41,6 +41,9 @@
 		CC7ABCA82A686CE6005EB971 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABCA22A686CE6005EB971 /* Colors.swift */; };
 		CC7ABCAA2A686D0C005EB971 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABCA92A686D0C005EB971 /* UIColor+Extensions.swift */; };
 		CC7ABCAC2A686D25005EB971 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABCAB2A686D25005EB971 /* Coordinator.swift */; };
+		CC8F9B362A85696E003847DD /* TwoButtonDialogBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F9B352A85696E003847DD /* TwoButtonDialogBox.swift */; };
+		CC8F9B382A856CB2003847DD /* ModalContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F9B372A856CB2003847DD /* ModalContainer.swift */; };
+		CC8F9B3A2A856CDD003847DD /* OneButtonDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F9B392A856CDD003847DD /* OneButtonDialog.swift */; };
 		CCA8D9A02A6EFDD700DB9451 /* DefaultTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D99F2A6EFDD700DB9451 /* DefaultTextInput.swift */; };
 		CCA8D9A32A6F049000DB9451 /* TextInputRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D9A22A6F049000DB9451 /* TextInputRules.swift */; };
 		CCA8D9A52A6F051300DB9451 /* String+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D9A42A6F051300DB9451 /* String+Extentions.swift */; };
@@ -97,6 +100,9 @@
 		CC7ABCA92A686D0C005EB971 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		CC7ABCAB2A686D25005EB971 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CC7ABCAD2A686FFD005EB971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CC8F9B352A85696E003847DD /* TwoButtonDialogBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonDialogBox.swift; sourceTree = "<group>"; };
+		CC8F9B372A856CB2003847DD /* ModalContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalContainer.swift; sourceTree = "<group>"; };
+		CC8F9B392A856CDD003847DD /* OneButtonDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneButtonDialog.swift; sourceTree = "<group>"; };
 		CCA8D99F2A6EFDD700DB9451 /* DefaultTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextInput.swift; sourceTree = "<group>"; };
 		CCA8D9A22A6F049000DB9451 /* TextInputRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputRules.swift; sourceTree = "<group>"; };
 		CCA8D9A42A6F051300DB9451 /* String+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extentions.swift"; sourceTree = "<group>"; };
@@ -328,6 +334,7 @@
 		CC7ABC992A686839005EB971 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				CC8F9B342A856954003847DD /* DialogBox */,
 				CCA8D9AA2A6F089100DB9451 /* Checkbox */,
 				CCA8D9AD2A6F089100DB9451 /* RoundedCorners */,
 				CCA8D9A72A6F082000DB9451 /* Button */,
@@ -347,6 +354,16 @@
 				CC7ABCA02A686CE5005EB971 /* Nunito-SemiBold.ttf */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		CC8F9B342A856954003847DD /* DialogBox */ = {
+			isa = PBXGroup;
+			children = (
+				CC8F9B352A85696E003847DD /* TwoButtonDialogBox.swift */,
+				CC8F9B372A856CB2003847DD /* ModalContainer.swift */,
+				CC8F9B392A856CDD003847DD /* OneButtonDialog.swift */,
+			);
+			path = DialogBox;
 			sourceTree = "<group>";
 		};
 		CCA8D9A12A6F047F00DB9451 /* Rules */ = {
@@ -542,6 +559,8 @@
 				CC7ABC772A6861BE005EB971 /* ChatLandingView.swift in Sources */,
 				CCA8D9A32A6F049000DB9451 /* TextInputRules.swift in Sources */,
 				CC7ABCAC2A686D25005EB971 /* Coordinator.swift in Sources */,
+				CC8F9B362A85696E003847DD /* TwoButtonDialogBox.swift in Sources */,
+				CC8F9B382A856CB2003847DD /* ModalContainer.swift in Sources */,
 				CCA8D9AC2A6F089100DB9451 /* Checkbox.swift in Sources */,
 				CC7ABC702A686192005EB971 /* RegisterView.swift in Sources */,
 				CC7ABC722A68619D005EB971 /* ProfileView.swift in Sources */,
@@ -558,6 +577,7 @@
 				CC7ABC802A686249005EB971 /* User.swift in Sources */,
 				CC7ABCAA2A686D0C005EB971 /* UIColor+Extensions.swift in Sources */,
 				CC7ABCA72A686CE6005EB971 /* Typography.swift in Sources */,
+				CC8F9B3A2A856CDD003847DD /* OneButtonDialog.swift in Sources */,
 				CC7ABC332A685FC7005EB971 /* AupiAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

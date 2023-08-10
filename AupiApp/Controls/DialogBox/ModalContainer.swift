@@ -7,14 +7,32 @@
 
 import SwiftUI
 
-struct Modal: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct ModalContainer<Modal: View>: ViewModifier {
+    
+    @Binding var isShowing: Bool
+    @ViewBuilder var modal: () -> Modal
+    
+    func body(content: Content) -> some View {
+        ZStack(alignment: .center) {
+            content
+                .zIndex(1)
+            if isShowing {
+                Color.black.ignoresSafeArea()
+                    .zIndex(2)
+                    .opacity(0.45).transition(.opacity)
+                modal()
+                    .padding(.bottom, 16)
+                    .padding(.trailing, 16)
+                    .zIndex(3)
+                    .transition(.scale(scale: 0.92).combined(with: .opacity))
+            }
+        }
     }
+
 }
 
-struct Modal_Previews: PreviewProvider {
-    static var previews: some View {
-        Modal()
+extension View {
+    func modal(isShowing: Binding<Bool>, @ViewBuilder modal: @escaping () -> some View) -> some View {
+        modifier(ModalContainer(isShowing: isShowing, modal: modal))
     }
 }

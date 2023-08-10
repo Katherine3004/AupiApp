@@ -76,4 +76,13 @@ class AuthenticationViewModel: ObservableObject {
             print("DEBUG: Failed to retreive user data \(error.localizedDescription)")
         }
     }
+    
+    func forgotPassword(email: String) async throws {
+        do {
+            try await Auth.auth().sendPasswordReset(withEmail: email)
+        }
+        catch {
+            print("DEBUG: Failed to send forgot password email \(error.localizedDescription)")
+        }
+    }
 }
