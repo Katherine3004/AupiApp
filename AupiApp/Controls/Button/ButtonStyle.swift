@@ -107,13 +107,13 @@ struct ExploreCardButtonStyle: ButtonStyle {
             configuration.label
                 .tracking(0.2)
                 .foregroundColor(.white)
-                .padding([.top, .bottom], 16)
+                .padding(.all, 16)
                 .frame(maxWidth: .infinity)
                 .contentShape(Rectangle())
                 .background(
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill()
-//                        .foregroundColor(configuration.isPressed ? .pnpBlueDark : .pnpBlue)
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(.white)
+                        .foregroundColor(configuration.isPressed ? .white : .backgroundBlue)
                         .foregroundColor(.white)
                 )
                 .scaleEffect(configuration.isPressed ? 0.98 : 1)
@@ -121,13 +121,13 @@ struct ExploreCardButtonStyle: ButtonStyle {
         } else {
             configuration.label
                 .foregroundColor(.white)
-                .padding([.top, .bottom], 16)
+                .padding(.all, 16)
                 .frame(maxWidth: .infinity)
                 .contentShape(Rectangle())
                 .background(
-                    RoundedRectangle(cornerRadius: 20)
+                    RoundedRectangle(cornerRadius: 10)
                         .fill()
-//                        .foregroundColor(configuration.isPressed ? .pnpBlueDark : .pnpBlue)
+                        .foregroundColor(configuration.isPressed ? .white : .backgroundBlue)
                         .foregroundColor(.white)
                 )
                 .scaleEffect(configuration.isPressed ? 0.98 : 1)
@@ -146,7 +146,7 @@ struct ProfileCardButtonStyle: ButtonStyle {
                 .frame(maxWidth: .infinity)
                 .contentShape(Rectangle())
                 .background(
-                    RoundedRectangle(cornerRadius: 8)
+                    RoundedRectangle(cornerRadius: 5)
                         .stroke(Color.gray, lineWidth: 1)
 //                        .foregroundColor(configuration.isPressed ? .pnpBlueDark : .pnpBlue)
                         .foregroundColor(.white)
@@ -160,7 +160,7 @@ struct ProfileCardButtonStyle: ButtonStyle {
                 .frame(maxWidth: .infinity)
                 .contentShape(Rectangle())
                 .background(
-                    RoundedRectangle(cornerRadius: 8)
+                    RoundedRectangle(cornerRadius: 5)
                         .stroke(Color.gray, lineWidth: 1)
 //                        .foregroundColor(configuration.isPressed ? .pnpBlueDark : .pnpBlue)
                         .foregroundColor(.white)

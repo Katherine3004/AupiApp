@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC792E592A8AB065008771F2 /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC792E582A8AB065008771F2 /* ProfileCardView.swift */; };
 		CC7ABC332A685FC7005EB971 /* AupiAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABC322A685FC7005EB971 /* AupiAppApp.swift */; };
 		CC7ABC352A685FC7005EB971 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABC342A685FC7005EB971 /* ContentView.swift */; };
 		CC7ABC372A685FCA005EB971 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC7ABC362A685FCA005EB971 /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC792E582A8AB065008771F2 /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
 		CC7ABC2F2A685FC7005EB971 /* AupiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AupiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7ABC322A685FC7005EB971 /* AupiAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AupiAppApp.swift; sourceTree = "<group>"; };
 		CC7ABC342A685FC7005EB971 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,6 +147,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC792E572A8AB044008771F2 /* ProfileCard */ = {
+			isa = PBXGroup;
+			children = (
+				CC792E582A8AB065008771F2 /* ProfileCardView.swift */,
+			);
+			path = ProfileCard;
+			sourceTree = "<group>";
+		};
 		CC7ABC262A685FC7005EB971 = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +344,7 @@
 		CC7ABC992A686839005EB971 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				CC792E572A8AB044008771F2 /* ProfileCard */,
 				CC8F9B342A856954003847DD /* DialogBox */,
 				CCA8D9AA2A6F089100DB9451 /* Checkbox */,
 				CCA8D9AD2A6F089100DB9451 /* RoundedCorners */,
@@ -560,6 +571,7 @@
 				CCA8D9A32A6F049000DB9451 /* TextInputRules.swift in Sources */,
 				CC7ABCAC2A686D25005EB971 /* Coordinator.swift in Sources */,
 				CC8F9B362A85696E003847DD /* TwoButtonDialogBox.swift in Sources */,
+				CC792E592A8AB065008771F2 /* ProfileCardView.swift in Sources */,
 				CC8F9B382A856CB2003847DD /* ModalContainer.swift in Sources */,
 				CCA8D9AC2A6F089100DB9451 /* Checkbox.swift in Sources */,
 				CC7ABC702A686192005EB971 /* RegisterView.swift in Sources */,

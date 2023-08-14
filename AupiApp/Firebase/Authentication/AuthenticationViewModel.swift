@@ -8,6 +8,8 @@
 import Foundation
 import Firebase
 import FirebaseFirestoreSwift
+import UIKit
+import FirebaseStorage
 
 protocol AuthFormProtocol {
     var formIsValid: Bool { get }
@@ -15,14 +17,17 @@ protocol AuthFormProtocol {
 
 @MainActor
 class AuthenticationViewModel: ObservableObject {
+    
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
+    @Published var allUsers: [User] = []
     
     init() {
         self.userSession = Auth.auth().currentUser
         
         Task {
             try await fetchUser()
+            try await fetchAllUsers()
         }
     }
     
@@ -74,6 +79,73 @@ class AuthenticationViewModel: ObservableObject {
         }
         catch {
             print("DEBUG: Failed to retreive user data \(error.localizedDescription)")
+        }
+    }
+    
+    func fetchAllUsers() async throws {
+        do {
+            let querySnapshot = try await Firestore.firestore().collection("user").getDocuments()
+            let users = querySnapshot.documents.compactMap { document in
+                try? document.data(as: User.self)
+            }
+            allUsers = users
+        }
+        catch {
+            print("DEBUG: Failed to retrieve all users: \(error.localizedDescription)")
+        }
+    }
+    
+    func updateProfile(profileImage: UIImage? = nil, cvData: Data? = nil, bio: String? = nil) async throws {
+        do {
+            guard let uid = Auth.auth().currentUser?.uid else {
+                print("DEBUG: No authenticated user found")
+                return
+            }
+            
+            if let profileImage = profileImage {
+                let storageRef = Storage.storage().reference().child("profileImages/\(uid).jpg")
+                if let imageData = profileImage.jpegData(compressionQuality: 0.5) {
+                    _ = storageRef.putData(imageData, metadata: nil) { metadata, error in
+                        if let error = error {
+                            print("DEBUG: Error uploading profile image: \(error.localizedDescription)")
+                        }
+                        else {
+                            storageRef.downloadURL { url, error in
+                                if let downloadURL = url {
+                                    Firestore.firestore().collection("user").document(uid).updateData(["profileImageURL": downloadURL.absoluteString])
+                                }
+                                else if let error = error {
+                                    print("DEBUG: Error getting profile image URL: \(error.localizedDescription)")
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            if let cvData = cvData {
+                let storageRef = Storage.storage().reference().child("cvFiles/\(uid).pdf")
+                _ = storageRef.putData(cvData, metadata: nil) { metadata, error in
+                    if let error = error {
+                        print("DEBUG: Error uploading CV: \(error.localizedDescription)")
+                    }
+                    else {
+                        storageRef.downloadURL { url, error in
+                            if let downloadURL = url {
+                                Firestore.firestore().collection("user").document(uid).updateData(["cvURL": downloadURL.absoluteString])
+                            } else if let error = error {
+                                print("DEBUG: Error getting CV URL: \(error.localizedDescription)")
+                            }
+                        }
+                    }
+                }
+            }
+            
+            //Update user
+            try await Firestore.firestore().collection("user").document(uid).updateData(["bio": bio])
+        }
+        catch {
+            print("DEBUG: Error saving user data: \(error.localizedDescription)")
         }
     }
     

@@ -45,5 +45,7 @@ struct User: Identifiable, Codable {
         return "\(firstname.first)\(lastname.first)"
     }
     
-    
+    var fullname: String {
+        return "\(firstname) \(lastname)"
+    }
 }
