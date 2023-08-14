@@ -11,13 +11,13 @@ struct ValidationRules {
     
     static let firstNameRules: [((String) -> Bool, String)] = [
         ({ !$0.isEmpty }, "First name is a required field"),
-        ({ $0.rangeOfCharacter(from: CharacterSet.alphanumerics.inverted) == nil }, "First name cannot contain special characters or numbers"),
+//        ({ $0.rangeOfCharacter(from: CharacterSet.alphanumerics.inverted) == nil }, "First name cannot contain special characters or numbers"),
         ({ $0.count >= 1 }, "First name requires at least one character")
     ]
     
     static let lastNameRules: [((String) -> Bool, String)] = [
         ({ !$0.isEmpty }, "Last name is a required field"),
-        ({ $0.rangeOfCharacter(from: CharacterSet.alphanumerics.inverted) == nil }, "Last name cannot contain special characters or numbers"),
+//        ({ $0.rangeOfCharacter(from: CharacterSet.alphanumerics.inverted) == nil }, "Last name cannot contain special characters or numbers"),
         ({ $0.count >= 1 }, "Last name requires at least one character")
     ]
     

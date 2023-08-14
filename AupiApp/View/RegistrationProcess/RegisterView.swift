@@ -61,7 +61,7 @@ struct RegisterView: View {
                 
                 DefaultTextInput(vm: emailValidation, placeholder: "Email Address")
                 
-                DefaultTextInput(vm: passwordValidation, placeholder: "Password")
+                DefaultTextInput(vm: passwordValidation, isPassword: true, placeholder: "Password")
                 
                 Checkbox(checked: $aupairChecked, title: "I am an Aupair")
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -104,7 +104,11 @@ struct RegisterView: View {
     
     func signUp() {
         Task {
-            try await viewModel.createUser(withEmail: emailValidation.text, password: passwordValidation.text, firstname: firstnameValidation.text, lastname: lastnameValidation.text, isAupair: aupairChecked)
+            try await viewModel.createUser(withEmail: emailValidation.text,
+                                           password: passwordValidation.text,
+                                           firstname: firstnameValidation.text,
+                                           lastname: lastnameValidation.text,
+                                           isAupair: aupairChecked)
         }
     }
 }

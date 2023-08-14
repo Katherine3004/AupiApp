@@ -41,7 +41,6 @@ struct TwoButtonDialogBox: View {
 
             Button(action: { btn1Tapped() }, label: {
                 Text(btn1Title)
-                    .foregroundColor(Color.white)
             })
             .buttonStyle(PrimaryButtonStyle())
             

@@ -71,7 +71,7 @@ struct SecondaryButtonStyle: ButtonStyle {
                 configuration.label
                     .font(.body18SemiBold)
                     .tracking(0.2)
-                    .foregroundColor(isEnabled ? .darkPurple : .mediumPurple)
+                    .foregroundColor(isEnabled ? .gray2 : .gray5)
                     .padding([.top, .bottom], 12)
                     .frame(height: 48)
                     .frame(maxWidth: .infinity)
@@ -85,7 +85,7 @@ struct SecondaryButtonStyle: ButtonStyle {
             } else {
                 configuration.label
                     .font(.body18SemiBold)
-                    .foregroundColor(isEnabled ? .darkPurple : .mediumPurple)
+                    .foregroundColor(isEnabled ? .gray2 : .gray5)
                     .padding([.top, .bottom], 12)
                     .frame(height: 48)
                     .frame(maxWidth: .infinity)
