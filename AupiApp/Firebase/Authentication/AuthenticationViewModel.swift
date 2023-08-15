@@ -15,12 +15,20 @@ protocol AuthFormProtocol {
     var formIsValid: Bool { get }
 }
 
+enum SignInState {
+    case signedIn
+    case signedOut
+}
+
 @MainActor
 class AuthenticationViewModel: ObservableObject {
     
+    @Published private(set) var signInState: SignInState? = .signedOut
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     @Published var allUsers: [User] = []
+    
+    @Published var errorDescription: String = ""
     
     init() {
         self.userSession = Auth.auth().currentUser
@@ -36,8 +44,10 @@ class AuthenticationViewModel: ObservableObject {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
             self.userSession = result.user
             try await fetchUser()
+            signInState = .signedIn
         }
         catch {
+            errorDescription = "\(error.localizedDescription)"
             print("DEBUG: Failed to sign in user with error \(error.localizedDescription)")
         }
     }
@@ -51,6 +61,7 @@ class AuthenticationViewModel: ObservableObject {
             try await Firestore.firestore().collection("user").document(user.id).setData(encodedUser)
             
             try await fetchUser()
+            signInState = .signedIn
         }
         catch {
             print("DEBUG: Failed to create user with error \(error.localizedDescription)")
@@ -62,7 +73,7 @@ class AuthenticationViewModel: ObservableObject {
             try Auth.auth().signOut()
             self.userSession = nil
             self.currentUser = nil
-            
+            signInState = .signedOut
         }
         catch {
             print("DEBUG: Failed to sign out with error \(error.localizedDescription)")

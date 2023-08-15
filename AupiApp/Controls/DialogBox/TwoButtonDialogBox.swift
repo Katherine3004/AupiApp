@@ -9,17 +9,16 @@ import SwiftUI
 
 struct TwoButtonDialogBox: View {
     
-    @Binding var title: String?
-    @Binding var description: String?
-    
+    let title: String?
+    let description: String?
     let btn1Title: String
     let btn2Title: String
     let btn1Tapped: () -> ()
     let btn2Tapped: () -> ()
     
-    init(title: Binding<String?>, description: Binding<String?>, btn1Title: String, btn2Title: String, btn1Tapped: @escaping () -> (), btn2Tapped: @escaping () -> ()) {
-        self._title = title
-        self._description = description
+    init(title: String, description: String, btn1Title: String, btn2Title: String, btn1Tapped: @escaping () -> (), btn2Tapped: @escaping () -> ()) {
+        self.title = title
+        self.description = description
         self.btn1Title = btn1Title
         self.btn2Title = btn2Title
         self.btn1Tapped = btn1Tapped
@@ -61,6 +60,6 @@ struct TwoButtonDialogBox: View {
 
 struct TwoButtonDialogBox_Previews: PreviewProvider {
     static var previews: some View {
-        TwoButtonDialogBox(title: .constant("Forgot your password?"), description: .constant("We'll email you a link to reset your password."), btn1Title: "Send me password reset link", btn2Title: "Close", btn1Tapped: {}, btn2Tapped: {})
+        TwoButtonDialogBox(title: "Forgot your password?", description: "We'll email you a link to reset your password.", btn1Title: "Send me password reset link", btn2Title: "Close", btn1Tapped: {}, btn2Tapped: {})
     }
 }

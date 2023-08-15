@@ -19,6 +19,17 @@ struct RegisterView: View {
     
     @State private var aupairChecked: Bool = false
     
+    var showErrorDialog: Binding<Bool> {
+        Binding<Bool>(
+            get: { !viewModel.errorDescription.isEmpty },
+            set: { newValue in
+                if !newValue {
+                    viewModel.errorDescription = ""
+                }
+            }
+        )
+    }
+    
     var body: some View {
         NavigationStack {
             ZStack(alignment: .center) {
@@ -45,6 +56,14 @@ struct RegisterView: View {
             .safeAreaInset(edge: .bottom) {
                 safeAreaContent
             }
+            .modal(isShowing: showErrorDialog) {
+                TwoButtonDialogBox(title: "Registration Error",
+                                   description: viewModel.errorDescription,
+                                   btn1Title: "Try Again",
+                                   btn2Title: "Close",
+                                   btn1Tapped: { signUp() },
+                                   btn2Tapped: { viewModel.errorDescription = "" })
+            }
         }
     }
     
@@ -58,11 +77,8 @@ struct RegisterView: View {
                 
                 DefaultTextInput(vm: firstnameValidation, placeholder: "First Name")
                 DefaultTextInput(vm: lastnameValidation, placeholder: "Last Name")
-                
                 DefaultTextInput(vm: emailValidation, placeholder: "Email Address")
-                
                 DefaultTextInput(vm: passwordValidation, isPassword: true, placeholder: "Password")
-                
                 Checkbox(checked: $aupairChecked, title: "I am an Aupair")
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
@@ -79,7 +95,6 @@ struct RegisterView: View {
                 })
                 .disabled(!formIsValid)
                 .buttonStyle(PrimaryButtonStyle())
-                .padding(.horizontal, 24)
                 
                 Spacer()
                 
@@ -100,6 +115,7 @@ struct RegisterView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.bottom, 32)
         }
+        .padding(.horizontal, 24)
     }
     
     func signUp() {

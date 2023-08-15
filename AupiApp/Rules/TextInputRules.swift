@@ -33,4 +33,7 @@ struct ValidationRules {
         ({ $0.containsNumber }, "Password must contain a number")
     ]
     
+    static let cannotBeEmpty: [((String) -> Bool, String)] = [
+        ({ !$0.isEmpty }, "Please fill in missing field."),
+    ]
 }

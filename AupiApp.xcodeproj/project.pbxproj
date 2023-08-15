@@ -42,6 +42,10 @@
 		CC7ABCA82A686CE6005EB971 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABCA22A686CE6005EB971 /* Colors.swift */; };
 		CC7ABCAA2A686D0C005EB971 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABCA92A686D0C005EB971 /* UIColor+Extensions.swift */; };
 		CC7ABCAC2A686D25005EB971 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABCAB2A686D25005EB971 /* Coordinator.swift */; };
+		CC7EB9372A8BFD7C00461665 /* AppTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7EB9362A8BFD7C00461665 /* AppTabController.swift */; };
+		CC7EB9392A8C01C100461665 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7EB9382A8C01C100461665 /* HomeCoordinator.swift */; };
+		CC7EB93B2A8C02BD00461665 /* ChatCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7EB93A2A8C02BD00461665 /* ChatCoordinator.swift */; };
+		CC7EB93D2A8C02E700461665 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7EB93C2A8C02E700461665 /* ProfileCoordinator.swift */; };
 		CC8F9B362A85696E003847DD /* TwoButtonDialogBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F9B352A85696E003847DD /* TwoButtonDialogBox.swift */; };
 		CC8F9B382A856CB2003847DD /* ModalContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F9B372A856CB2003847DD /* ModalContainer.swift */; };
 		CC8F9B3A2A856CDD003847DD /* OneButtonDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F9B392A856CDD003847DD /* OneButtonDialog.swift */; };
@@ -102,6 +106,10 @@
 		CC7ABCA92A686D0C005EB971 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		CC7ABCAB2A686D25005EB971 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CC7ABCAD2A686FFD005EB971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CC7EB9362A8BFD7C00461665 /* AppTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabController.swift; sourceTree = "<group>"; };
+		CC7EB9382A8C01C100461665 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		CC7EB93A2A8C02BD00461665 /* ChatCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCoordinator.swift; sourceTree = "<group>"; };
+		CC7EB93C2A8C02E700461665 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		CC8F9B352A85696E003847DD /* TwoButtonDialogBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonDialogBox.swift; sourceTree = "<group>"; };
 		CC8F9B372A856CB2003847DD /* ModalContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalContainer.swift; sourceTree = "<group>"; };
 		CC8F9B392A856CDD003847DD /* OneButtonDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneButtonDialog.swift; sourceTree = "<group>"; };
@@ -226,6 +234,7 @@
 		CC7ABC5F2A686076005EB971 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CC7EB9352A8BFD6700461665 /* TabController */,
 				CC7ABC6B2A68615F005EB971 /* Chat */,
 				CC7ABC6A2A686156005EB971 /* Home */,
 				CC7ABC6C2A686165005EB971 /* Profile */,
@@ -336,6 +345,9 @@
 		CC7ABC982A686831005EB971 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				CC7EB9342A8BFBB800461665 /* ProfileCoordinator */,
+				CC7EB9332A8BFBA800461665 /* ChatCoordinator */,
+				CC7EB9322A8BFB8B00461665 /* HomeCoordinator */,
 				CC7ABCAB2A686D25005EB971 /* Coordinator.swift */,
 			);
 			path = Coordinator;
@@ -365,6 +377,38 @@
 				CC7ABCA02A686CE5005EB971 /* Nunito-SemiBold.ttf */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		CC7EB9322A8BFB8B00461665 /* HomeCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CC7EB9382A8C01C100461665 /* HomeCoordinator.swift */,
+			);
+			path = HomeCoordinator;
+			sourceTree = "<group>";
+		};
+		CC7EB9332A8BFBA800461665 /* ChatCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CC7EB93A2A8C02BD00461665 /* ChatCoordinator.swift */,
+			);
+			path = ChatCoordinator;
+			sourceTree = "<group>";
+		};
+		CC7EB9342A8BFBB800461665 /* ProfileCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CC7EB93C2A8C02E700461665 /* ProfileCoordinator.swift */,
+			);
+			path = ProfileCoordinator;
+			sourceTree = "<group>";
+		};
+		CC7EB9352A8BFD6700461665 /* TabController */ = {
+			isa = PBXGroup;
+			children = (
+				CC7EB9362A8BFD7C00461665 /* AppTabController.swift */,
+			);
+			path = TabController;
 			sourceTree = "<group>";
 		};
 		CC8F9B342A856954003847DD /* DialogBox */ = {
@@ -567,12 +611,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC7ABC6E2A686188005EB971 /* SignInView.swift in Sources */,
+				CC7EB9372A8BFD7C00461665 /* AppTabController.swift in Sources */,
 				CC7ABC772A6861BE005EB971 /* ChatLandingView.swift in Sources */,
 				CCA8D9A32A6F049000DB9451 /* TextInputRules.swift in Sources */,
 				CC7ABCAC2A686D25005EB971 /* Coordinator.swift in Sources */,
 				CC8F9B362A85696E003847DD /* TwoButtonDialogBox.swift in Sources */,
 				CC792E592A8AB065008771F2 /* ProfileCardView.swift in Sources */,
 				CC8F9B382A856CB2003847DD /* ModalContainer.swift in Sources */,
+				CC7EB93D2A8C02E700461665 /* ProfileCoordinator.swift in Sources */,
 				CCA8D9AC2A6F089100DB9451 /* Checkbox.swift in Sources */,
 				CC7ABC702A686192005EB971 /* RegisterView.swift in Sources */,
 				CC7ABC722A68619D005EB971 /* ProfileView.swift in Sources */,
@@ -581,10 +627,12 @@
 				CCA8D9A52A6F051300DB9451 /* String+Extentions.swift in Sources */,
 				CC7ABC9C2A6869C1005EB971 /* User+Extensions.swift in Sources */,
 				CC7ABC752A6861B0005EB971 /* HomeView.swift in Sources */,
+				CC7EB93B2A8C02BD00461665 /* ChatCoordinator.swift in Sources */,
 				CC7ABC7D2A68622C005EB971 /* AuthenticationViewModel.swift in Sources */,
 				CCA8D9AF2A6F089200DB9451 /* RoundedCorners.swift in Sources */,
 				CC7ABCA82A686CE6005EB971 /* Colors.swift in Sources */,
 				CC7ABC352A685FC7005EB971 /* ContentView.swift in Sources */,
+				CC7EB9392A8C01C100461665 /* HomeCoordinator.swift in Sources */,
 				CCA8D9A02A6EFDD700DB9451 /* DefaultTextInput.swift in Sources */,
 				CC7ABC802A686249005EB971 /* User.swift in Sources */,
 				CC7ABCAA2A686D0C005EB971 /* UIColor+Extensions.swift in Sources */,

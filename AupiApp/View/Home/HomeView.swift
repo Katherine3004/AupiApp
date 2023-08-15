@@ -48,9 +48,11 @@ struct HomeView: View {
     }
     
     var familyView: some View {
-        LazyVStack(alignment: .leading, spacing: 0) {
-            ForEach(filteredAupairUsers, id: \.id) { user in
-                ProfileCardView(initials: user.initials, fullName: user.fullname, onTap: {})
+        ScrollView(showsIndicators: false) {
+            LazyVStack(alignment: .leading, spacing: 0) {
+                ForEach(filteredAupairUsers, id: \.id) { user in
+                    ProfileCardView(initials: user.initials, fullName: user.fullname, onTap: {})
+                }
             }
         }
     }
