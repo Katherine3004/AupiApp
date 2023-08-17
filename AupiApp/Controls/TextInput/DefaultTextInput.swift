@@ -76,10 +76,8 @@ struct DefaultTextInput: View {
                 }
                 .frame(height: 30)
                 .padding(.all, 10)
-                .background(
-                    RoundedRectangle(cornerRadius: 5)
-                        .fill(.white)
-                )
+                .background(Color.white)
+                .cornerRadius(5)
                 .overlay(
                     RoundedRectangle(cornerRadius: 5)
                         .stroke(isFocused ? Color.mediumBlue : Color.gray5, lineWidth: 1)

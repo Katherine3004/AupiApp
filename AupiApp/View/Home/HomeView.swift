@@ -11,8 +11,24 @@ struct HomeView: View {
     
     @EnvironmentObject var viewModel: AuthenticationViewModel
     
+    @State private var searchText = ""
+    
+//    var filteredAupairUsers: [User] {
+//        return viewModel.allUsers.filter { $0.isAupair }
+//    }
+    
     var filteredAupairUsers: [User] {
-        return viewModel.allUsers.filter { $0.isAupair }
+        if searchText.isEmpty {
+            return viewModel.allUsers.filter { $0.isAupair }
+        }
+        else {
+            return viewModel.allUsers.filter { user in
+                user.isAupair &&
+                (user.firstname.localizedCaseInsensitiveContains(searchText) ||
+                user.lastname.localizedCaseInsensitiveContains(searchText) ||
+                user.email.localizedCaseInsensitiveContains(searchText))
+            }
+        }
     }
     
     var body: some View {
@@ -48,13 +64,18 @@ struct HomeView: View {
     }
     
     var familyView: some View {
-        ScrollView(showsIndicators: false) {
-            LazyVStack(alignment: .leading, spacing: 0) {
-                ForEach(filteredAupairUsers, id: \.id) { user in
-                    ProfileCardView(initials: user.initials, fullName: user.fullname, onTap: {})
+        VStack(alignment: .leading, spacing: 24) {
+            SearchBar(searchText: $searchText)
+            ScrollView(showsIndicators: false) {
+                LazyVStack(alignment: .leading, spacing: 16) {
+                    ForEach(filteredAupairUsers, id: \.id) { user in
+                        ProfileCardView(initials: user.initials, fullName: user.fullname, onTap: {})
+                    }
                 }
             }
         }
+        .padding(.all, 24)
+        .background(Color.backgroundBlue)
     }
     
     var safeAreaContent: some View {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC6624082A8E8FA000DFAFA6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6624072A8E8FA000DFAFA6 /* SearchBar.swift */; };
+		CC66240B2A8EB21400DFAFA6 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC66240A2A8EB21400DFAFA6 /* SwiftUIView.swift */; };
 		CC792E592A8AB065008771F2 /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC792E582A8AB065008771F2 /* ProfileCardView.swift */; };
 		CC7ABC332A685FC7005EB971 /* AupiAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABC322A685FC7005EB971 /* AupiAppApp.swift */; };
 		CC7ABC352A685FC7005EB971 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABC342A685FC7005EB971 /* ContentView.swift */; };
@@ -75,6 +77,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC6624072A8E8FA000DFAFA6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		CC66240A2A8EB21400DFAFA6 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		CC792E582A8AB065008771F2 /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
 		CC7ABC2F2A685FC7005EB971 /* AupiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AupiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7ABC322A685FC7005EB971 /* AupiAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AupiAppApp.swift; sourceTree = "<group>"; };
@@ -155,6 +159,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC6624062A8E8E5D00DFAFA6 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				CC6624072A8E8FA000DFAFA6 /* SearchBar.swift */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		CC6624092A8EB20000DFAFA6 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CC66240A2A8EB21400DFAFA6 /* SwiftUIView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		CC792E572A8AB044008771F2 /* ProfileCard */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +376,8 @@
 		CC7ABC992A686839005EB971 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				CC6624092A8EB20000DFAFA6 /* TabBar */,
+				CC6624062A8E8E5D00DFAFA6 /* SearchBar */,
 				CC792E572A8AB044008771F2 /* ProfileCard */,
 				CC8F9B342A856954003847DD /* DialogBox */,
 				CCA8D9AA2A6F089100DB9451 /* Checkbox */,
@@ -627,6 +649,7 @@
 				CCA8D9A52A6F051300DB9451 /* String+Extentions.swift in Sources */,
 				CC7ABC9C2A6869C1005EB971 /* User+Extensions.swift in Sources */,
 				CC7ABC752A6861B0005EB971 /* HomeView.swift in Sources */,
+				CC6624082A8E8FA000DFAFA6 /* SearchBar.swift in Sources */,
 				CC7EB93B2A8C02BD00461665 /* ChatCoordinator.swift in Sources */,
 				CC7ABC7D2A68622C005EB971 /* AuthenticationViewModel.swift in Sources */,
 				CCA8D9AF2A6F089200DB9451 /* RoundedCorners.swift in Sources */,
@@ -635,6 +658,7 @@
 				CC7EB9392A8C01C100461665 /* HomeCoordinator.swift in Sources */,
 				CCA8D9A02A6EFDD700DB9451 /* DefaultTextInput.swift in Sources */,
 				CC7ABC802A686249005EB971 /* User.swift in Sources */,
+				CC66240B2A8EB21400DFAFA6 /* SwiftUIView.swift in Sources */,
 				CC7ABCAA2A686D0C005EB971 /* UIColor+Extensions.swift in Sources */,
 				CC7ABCA72A686CE6005EB971 /* Typography.swift in Sources */,
 				CC8F9B3A2A856CDD003847DD /* OneButtonDialog.swift in Sources */,
@@ -793,6 +817,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AupiApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 9CN76SFR9N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AupiApp/Info.plist;
@@ -831,6 +856,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AupiApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 9CN76SFR9N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AupiApp/Info.plist;

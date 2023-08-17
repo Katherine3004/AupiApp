@@ -43,18 +43,19 @@ struct RegisterView: View {
                     .frame(width: 690, height: 690)
                     .offset(x: 150, y: 450)
                 
-                ScrollView(showsIndicators: false) {
-                    Group {
-                        viewContent
-                          
+                VStack(alignment: .center, spacing: 0) {
+                    ScrollView(showsIndicators: false) {
+                        Group {
+                            viewContent
+                            
+                        }
+                        .padding(.horizontal, 24)
                     }
-                    .padding(.horizontal, 24)
+                    Spacer()
+                    safeAreaContent
                 }
-                .frame(width: UIScreen.main.bounds.width)
-                
-            }
-            .safeAreaInset(edge: .bottom) {
-                safeAreaContent
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                .padding(.top, 48)
             }
             .modal(isShowing: showErrorDialog) {
                 TwoButtonDialogBox(title: "Registration Error",
@@ -87,7 +88,7 @@ struct RegisterView: View {
     
     var safeAreaContent: some View {
         Group {
-            VStack(alignment: .center, spacing: 16) {
+            VStack(alignment: .center, spacing: 32) {
                 Button(action: {
                     signUp()
                 }, label: {
@@ -95,8 +96,6 @@ struct RegisterView: View {
                 })
                 .disabled(!formIsValid)
                 .buttonStyle(PrimaryButtonStyle())
-                
-                Spacer()
                 
               Button(action: {
                   dismiss()
@@ -112,10 +111,10 @@ struct RegisterView: View {
                   .frame(maxWidth: .infinity, alignment: .center)
               })
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding(.bottom, 32)
+            .padding(.horizontal, 24)
+            .padding(.bottom, 48)
+            .frame(maxHeight: 150)
         }
-        .padding(.horizontal, 24)
     }
     
     func signUp() {
