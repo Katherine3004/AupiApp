@@ -14,21 +14,12 @@ struct ContentView: View {
     var body: some View {
         switch viewModel.signInState {
         case .signedIn:
-//            HomeView()
             AppTabController(viewModel: viewModel)
                 .ignoresSafeArea()
                 .environmentObject(viewModel)
         default:
             SignInView()
         }
-//        Group {
-//            if viewModel.userSession != nil {
-//
-//            }
-//            else {
-//
-//            }
-//        }
     }
 }
 

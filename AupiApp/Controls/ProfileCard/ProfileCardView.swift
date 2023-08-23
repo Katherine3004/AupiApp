@@ -46,7 +46,7 @@ struct ProfileCardView: View {
                     }
                 }
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(fullName)
+                    Text(fullName.capitalized)
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     

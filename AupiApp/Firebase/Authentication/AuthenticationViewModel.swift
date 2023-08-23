@@ -33,6 +33,10 @@ class AuthenticationViewModel: ObservableObject {
     init() {
         self.userSession = Auth.auth().currentUser
         
+        if userSession != nil {
+               signInState = .signedIn
+        }
+        
         Task {
             try await fetchUser()
             try await fetchAllUsers()

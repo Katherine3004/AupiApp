@@ -14,7 +14,7 @@ struct SearchBar: View {
     @Binding var searchText: String
 
     var body: some View {
-        HStack(alignment: .center, spacing: 0) {
+        HStack(alignment: .center, spacing: 8) {
             Image(systemName: "magnifyingglass")
                 .frame(width: 24, height: 24)
                 .foregroundColor(Color.gray3)
@@ -25,12 +25,11 @@ struct SearchBar: View {
             
             Button(action: {
                 searchText = ""
-            }) {
+            }, label: {
                 Image(systemName: "xmark.circle.fill")
-                    .foregroundColor(Color.gray3)
+                    .foregroundColor(Color.gray4)
                     .opacity(searchText.isEmpty ? 0 : 1)
-            }
-            .padding(.trailing)
+            })
         }
         .frame(height: 30)
         .padding(.all, 10)
