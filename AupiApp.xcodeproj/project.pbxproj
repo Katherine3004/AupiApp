@@ -57,6 +57,8 @@
 		CCA8D9A92A6F085F00DB9451 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D9A82A6F085F00DB9451 /* ButtonStyle.swift */; };
 		CCA8D9AC2A6F089100DB9451 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D9AB2A6F089100DB9451 /* Checkbox.swift */; };
 		CCA8D9AF2A6F089200DB9451 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D9AE2A6F089100DB9451 /* RoundedCorners.swift */; };
+		CCA98B952A9D1A27003CCF97 /* PublicProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA98B942A9D1A27003CCF97 /* PublicProfileView.swift */; };
+		CCA98B982A9D1CAD003CCF97 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA98B972A9D1CAD003CCF97 /* SettingsRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,8 @@
 		CCA8D9A82A6F085F00DB9451 /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		CCA8D9AB2A6F089100DB9451 /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		CCA8D9AE2A6F089100DB9451 /* RoundedCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		CCA98B942A9D1A27003CCF97 /* PublicProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicProfileView.swift; sourceTree = "<group>"; };
+		CCA98B972A9D1CAD003CCF97 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				CC7ABC742A6861B0005EB971 /* HomeView.swift */,
+				CCA98B942A9D1A27003CCF97 /* PublicProfileView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 		CC7ABC992A686839005EB971 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				CCA98B962A9D1C97003CCF97 /* SettingsRow */,
 				CC6624092A8EB20000DFAFA6 /* TabBar */,
 				CC6624062A8E8E5D00DFAFA6 /* SearchBar */,
 				CC792E572A8AB044008771F2 /* ProfileCard */,
@@ -481,6 +487,14 @@
 				CCA8D9AE2A6F089100DB9451 /* RoundedCorners.swift */,
 			);
 			path = RoundedCorners;
+			sourceTree = "<group>";
+		};
+		CCA98B962A9D1C97003CCF97 /* SettingsRow */ = {
+			isa = PBXGroup;
+			children = (
+				CCA98B972A9D1CAD003CCF97 /* SettingsRowView.swift */,
+			);
+			path = SettingsRow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -661,6 +675,8 @@
 				CC66240B2A8EB21400DFAFA6 /* TabRow.swift in Sources */,
 				CC7ABCAA2A686D0C005EB971 /* UIColor+Extensions.swift in Sources */,
 				CC7ABCA72A686CE6005EB971 /* Typography.swift in Sources */,
+				CCA98B982A9D1CAD003CCF97 /* SettingsRowView.swift in Sources */,
+				CCA98B952A9D1A27003CCF97 /* PublicProfileView.swift in Sources */,
 				CC8F9B3A2A856CDD003847DD /* OneButtonDialog.swift in Sources */,
 				CC7ABC332A685FC7005EB971 /* AupiAppApp.swift in Sources */,
 			);

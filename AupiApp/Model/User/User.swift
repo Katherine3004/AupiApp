@@ -17,6 +17,7 @@ struct User: Identifiable, Codable {
     let dob: Date?
     let gender: String?
     let location: String?
+    let imageURL: String?
     
 //    let profilePicture:
 //    let cv:
@@ -29,7 +30,8 @@ struct User: Identifiable, Codable {
          isAupair: Bool,
          dob: Date? = nil,
          gender: String? = nil,
-         location: String? = nil
+         location: String? = nil,
+         imageURL: String? = nil
     ) {
         self.id = id
         self.firstname = firstname
@@ -39,10 +41,11 @@ struct User: Identifiable, Codable {
         self.dob = dob
         self.gender = gender
         self.location = location
+        self.imageURL = imageURL
     }
     
     var initials: String {
-        return "\(firstname.first)\(lastname.first)"
+        return "\(String(describing: firstname.first))\(String(describing: lastname.first))"
     }
     
     var fullname: String {

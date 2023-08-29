@@ -19,6 +19,10 @@ extension Color {
      */
     static let backgroundBlue = Color(hex: 0xf1f3f9, alpha: 1)
     /**
+     #cddbe1
+     */
+    static let lightBackgroundBlue = Color(hex: 0xcddbe1, alpha: 1)
+    /**
      #AEE2FF
      */
     static let lightBlue = Color(hex: 0xAEE2FF, alpha: 1)
@@ -27,9 +31,10 @@ extension Color {
      **/
     static let mediumBlue = Color(hex: 0x93C6E7, alpha: 1)
     /**
-     #e9ddf3
+     #ece5fd
      */
-    static let lightPurple = Color(hex: 0xe9ddf3, alpha: 1)
+//    ece5fd
+    static let lightPurple = Color(hex: 0xece5fd, alpha: 1)
     /**
      #e4d3f2
      */
@@ -39,9 +44,25 @@ extension Color {
      */
     static let darkPurple = Color(hex: 0x684d80, alpha: 1)
     /**
-    #FEDEFF
+    #f8d5e6
      */
-    static let appPink = Color(hex: 0xFEDEFF, alpha: 1)
+    static let appPink = Color(hex: 0xf8d5e6, alpha: 1)
+    /**
+     #f3ddea
+     */
+    static let lightPink = Color(hex: 0xf3ddea, alpha: 1)
+    /**
+     #f5e8d7
+     */
+    static let lightPeach = Color(hex: 0xf5e8d7, alpha: 1)
+    /**
+     #d9ead3
+     */
+    static let lightGreen = Color(hex: 0xd9ead3, alpha: 1)
+    /**
+     #f0ead6
+     */
+    static let lightYellow = Color(hex: 0xf0ead6, alpha: 1)
     /**
      #c5656
      */

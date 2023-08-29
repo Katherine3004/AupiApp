@@ -20,11 +20,16 @@ class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate, Ob
     
     func start() {
         navigationController.delegate = self
-        let vc = UIHostingController(rootView: HomeView())
+        let vc = UIHostingController(rootView: HomeView(coordinator: self))
         vc.tabBarItem = UITabBarItem(title: "Home",
                                      image: UIImage(systemName: "magnifyingglass.circle")?.withRenderingMode(.alwaysOriginal),
                                      selectedImage: UIImage(systemName: "magnifyingglass.circle.fill")?.withRenderingMode(.alwaysOriginal))
         navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func showAupairProfile(id: String) {
+        let vc = UIHostingController(rootView: PublicProfileView(id: id))
+        navigationController.pushViewController(vc, animated: true)
     }
     
     func popView() {

@@ -33,6 +33,8 @@ struct HomeView: View {
         }
     }
     
+    weak var coordinator: HomeCoordinator?
+    
     var body: some View {
         viewContent
             .sheet(item: $activeSheet) { item in
@@ -92,7 +94,7 @@ struct HomeView: View {
             .background(
                 RoundedRectangle(cornerRadius: 8)
                     .strokeBorder(Color.lightPurple, lineWidth: 2)
-                    .background(RoundedRectangle(cornerRadius: 64).fill(.white))
+                    .background(RoundedRectangle(cornerRadius: 8).fill(.white))
             )
         })
         .buttonStyle(PlainButtonStyle())
@@ -118,7 +120,7 @@ struct HomeView: View {
             .background(
                 RoundedRectangle(cornerRadius: 8)
                     .strokeBorder(Color.lightPurple, lineWidth: 2)
-                    .background(RoundedRectangle(cornerRadius: 64).fill(.white))
+                    .background(RoundedRectangle(cornerRadius: 8).fill(.white))
             )
         })
         .buttonStyle(PlainButtonStyle())
@@ -137,7 +139,14 @@ struct HomeView: View {
             ScrollView(showsIndicators: false) {
                 LazyVStack(alignment: .leading, spacing: 16) {
                     ForEach(filteredAupairUsers, id: \.id) { user in
-                        ProfileCardView(initials: user.initials, fullName: user.fullname, onTap: {})
+                        ProfileCardView(
+                            initials: user.initials,
+                            fullName: user.fullname,
+                            image: user.imageURL,
+                            onTap: {
+                                coordinator?.showAupairProfile(id: user.id)
+                            }
+                        )
                     }
                 }
                 .padding(.top, 20)

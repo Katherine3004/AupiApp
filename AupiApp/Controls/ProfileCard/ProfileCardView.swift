@@ -29,20 +29,41 @@ struct ProfileCardView: View {
         Button(action: { onTap() }, label: {
             HStack(alignment: .center, spacing: 16) {
                 Group {
-                    if image?.isEmpty == true {
-                        Text(initials)
-                            .font(.h3)
-                            .foregroundColor(.white)
-                            .frame(width: 80, height: 80)
-                            .background(
-                                Circle()
-                                    .fill(Color.lightPurple)
-                            )
+                    if let image = image, let imageUrl = URL(string: image) {
+                        AsyncImage(url: imageUrl) { state in
+                            switch state {
+                            case .empty:
+                                Image(systemName: "person.circle.fill")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 80, height: 80)
+                                    .foregroundColor(Color.lightPurple)
+                                    .clipShape(Circle())
+                            case .success(let loadedImage):
+                                loadedImage
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 80, height: 80)
+                                    .clipShape(Circle())
+                            case .failure:
+                                Image(systemName: "person.circle.fill")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 80, height: 80)
+                                    .foregroundColor(Color.lightPurple)
+                                    .clipShape(Circle())
+                            @unknown default:
+                                EmptyView()
+                            }
+                        }
                     }
                     else {
-                        Circle()
-                            .fill(Color.lightPurple)
+                        Image(systemName: "person.circle.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
                             .frame(width: 80, height: 80)
+                            .foregroundColor(Color.lightPurple)
+                            .clipShape(Circle())
                     }
                 }
                 VStack(alignment: .leading, spacing: 4) {
