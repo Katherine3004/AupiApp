@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CC6624082A8E8FA000DFAFA6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6624072A8E8FA000DFAFA6 /* SearchBar.swift */; };
 		CC66240B2A8EB21400DFAFA6 /* TabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC66240A2A8EB21400DFAFA6 /* TabRow.swift */; };
+		CC78558B2A9E7190002EE480 /* CustomNavigationBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC78558A2A9E7190002EE480 /* CustomNavigationBackButton.swift */; };
 		CC792E592A8AB065008771F2 /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC792E582A8AB065008771F2 /* ProfileCardView.swift */; };
 		CC7ABC332A685FC7005EB971 /* AupiAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABC322A685FC7005EB971 /* AupiAppApp.swift */; };
 		CC7ABC352A685FC7005EB971 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7ABC342A685FC7005EB971 /* ContentView.swift */; };
@@ -81,6 +82,7 @@
 /* Begin PBXFileReference section */
 		CC6624072A8E8FA000DFAFA6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CC66240A2A8EB21400DFAFA6 /* TabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRow.swift; sourceTree = "<group>"; };
+		CC78558A2A9E7190002EE480 /* CustomNavigationBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBackButton.swift; sourceTree = "<group>"; };
 		CC792E582A8AB065008771F2 /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
 		CC7ABC2F2A685FC7005EB971 /* AupiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AupiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7ABC322A685FC7005EB971 /* AupiAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AupiAppApp.swift; sourceTree = "<group>"; };
@@ -177,6 +179,14 @@
 				CC66240A2A8EB21400DFAFA6 /* TabRow.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CC7855892A9E713B002EE480 /* CustomNavigationButton */ = {
+			isa = PBXGroup;
+			children = (
+				CC78558A2A9E7190002EE480 /* CustomNavigationBackButton.swift */,
+			);
+			path = CustomNavigationButton;
 			sourceTree = "<group>";
 		};
 		CC792E572A8AB044008771F2 /* ProfileCard */ = {
@@ -397,6 +407,7 @@
 		CC7ABC9A2A68684F005EB971 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				CC7855892A9E713B002EE480 /* CustomNavigationButton */,
 				CC7ABCA22A686CE6005EB971 /* Colors.swift */,
 				CC7ABCA12A686CE5005EB971 /* Typography.swift */,
 				CC7ABC9D2A686CE5005EB971 /* Nunito-Bold.ttf */,
@@ -652,6 +663,7 @@
 				CCA8D9A32A6F049000DB9451 /* TextInputRules.swift in Sources */,
 				CC7ABCAC2A686D25005EB971 /* Coordinator.swift in Sources */,
 				CC8F9B362A85696E003847DD /* TwoButtonDialogBox.swift in Sources */,
+				CC78558B2A9E7190002EE480 /* CustomNavigationBackButton.swift in Sources */,
 				CC792E592A8AB065008771F2 /* ProfileCardView.swift in Sources */,
 				CC8F9B382A856CB2003847DD /* ModalContainer.swift in Sources */,
 				CC7EB93D2A8C02E700461665 /* ProfileCoordinator.swift in Sources */,

@@ -21,6 +21,7 @@ struct AupiAppApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(viewModel)
+                
         }
     }
 }

@@ -24,45 +24,66 @@ extension Color {
     static let lightBackgroundBlue = Color(hex: 0xcddbe1, alpha: 1)
     /**
      #AEE2FF
+     #ECF2F4
      */
-    static let lightBlue = Color(hex: 0xAEE2FF, alpha: 1)
+    static let lightBlue = Color(hex: 0xECF2F4, alpha: 1)
     /**
      #93C6E7
+     #B0D1DF
      **/
-    static let mediumBlue = Color(hex: 0x93C6E7, alpha: 1)
+    static let mediumBlue = Color(hex: 0xB0D1DF, alpha: 1)
     /**
-     #ece5fd
+     #ECE5FD
      */
-//    ece5fd
-    static let lightPurple = Color(hex: 0xece5fd, alpha: 1)
+    static let lightPurple = Color(hex: 0xECE5FD, alpha: 1)
     /**
      #e4d3f2
+     #DDD6F4
      */
-    static let mediumPurple = Color(hex: 0xe4d3f2, alpha: 1)
+    static let mediumPurple = Color(hex: 0xDDD6F4, alpha: 1)
     /**
      #684d80
+     #907CCE
      */
-    static let darkPurple = Color(hex: 0x684d80, alpha: 1)
+    static let darkPurple = Color(hex: 0x907CCE, alpha: 1)
+    /**
+     #fcedf5
+     */
+    static let lightAppPink = Color(hex: 0xfcedf5, alpha: 1)
     /**
     #f8d5e6
      */
     static let appPink = Color(hex: 0xf8d5e6, alpha: 1)
     /**
+     #f5e6ef
+     */
+    static let lightPink = Color(hex: 0xf5e6ef, alpha: 1)
+    /**
      #f3ddea
      */
-    static let lightPink = Color(hex: 0xf3ddea, alpha: 1)
+    static let mediumPink = Color(hex: 0xf3ddea, alpha: 1)
     /**
-     #f5e8d7
+     #F9F2EC
+     #FDF3E0
      */
-    static let lightPeach = Color(hex: 0xf5e8d7, alpha: 1)
+    static let lightPeach = Color(hex: 0xFDF3E0, alpha: 1)
+    /**
+     #EFD8AF
+     #EFD8AD
+     */
+    static let mediumPeach = Color(hex: 0xEFD8AD, alpha: 1)
     /**
      #d9ead3
      */
     static let lightGreen = Color(hex: 0xd9ead3, alpha: 1)
     /**
-     #f0ead6
+     #fcf9d7
      */
-    static let lightYellow = Color(hex: 0xf0ead6, alpha: 1)
+    static let lightYellow = Color(hex: 0xfcf9d7, alpha: 1)
+    /**
+     #fcf6b6
+     */
+    static let mediumYellow = Color(hex: 0xfcf6b6, alpha: 1)
     /**
      #c5656
      */
