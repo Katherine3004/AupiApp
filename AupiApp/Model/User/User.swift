@@ -19,10 +19,7 @@ struct User: Identifiable, Codable {
     let location: String?
     let imageURL: String?
     let bio: String?
-    
-//    let profilePicture:
-//    let cv:
-    
+    let yearsOfExperience: String?
     
     init(id: String,
          firstname: String,
@@ -33,7 +30,8 @@ struct User: Identifiable, Codable {
          gender: String? = nil,
          location: String? = nil,
          imageURL: String? = nil,
-         bio: String? = nil
+         bio: String? = nil,
+         yearsOfExperience: String? = nil
     ) {
         self.id = id
         self.firstname = firstname
@@ -45,14 +43,22 @@ struct User: Identifiable, Codable {
         self.location = location
         self.imageURL = imageURL
         self.bio = bio
+        self.yearsOfExperience = yearsOfExperience
     }
     
     var initials: String {
         return "\(String(describing: firstname.first))\(String(describing: lastname.first))"
     }
     
- 
-   var fullname: String {
+    var fullname: String {
         return "\(firstname) \(lastname)"
+    }
+    
+    var age: Int {
+        let calendar = Calendar.current
+        let currentDate = Date()
+        
+        let ageComponents = calendar.dateComponents([.year], from: self.dob ?? Date(), to: currentDate)
+        return ageComponents.year ?? 0
     }
 }

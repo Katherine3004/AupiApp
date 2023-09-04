@@ -11,61 +11,64 @@ struct PublicProfileView: View {
     
     @EnvironmentObject var viewModel: AuthenticationViewModel
     
+    @State private var user: User? = nil
+    
     let id: String
     
-    var width = (UIScreen.main.bounds.width / 3) - 32
+    var width = ((UIScreen.main.bounds.width / 3) - 32)
     
     var body: some View {
-        if let user = viewModel.allUsers.first(where: {
-            ScrollView(showsIndicators: false) {
-                VStack(alignment: .center, spacing: 16) {
-                    Text(user.fullname)
-                        .font(.h7)
-                        .foregroundColor(.gray2)
-                    
-                    Image(systemName: "person")
-                        .frame(width: 130, height: 130)
-                        .background(Color.lightPurple)
-                        .clipShape(Circle())
-                    
-                    Text(user.bio)
-                        .font(.body14SemiBold)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color.gray2)
-                        .padding(.bottom, 8)
-                    
-                    aboutContent
-                        .padding(.bottom, 16)
-                    
-                    HStack(alignment: .center, spacing: 16) {
-                        ProfileSegment(image: "circle.grid.cross.up.filled",
-                                       title: "Resume",
-                                       backgroundColor: Color.lightPeach,
-                                       imageColor: Color.mediumPeach)
-                        
-                        ProfileSegment(image: "circle.grid.cross.right.filled",
-                                       title: "Education",
-                                       backgroundColor: Color.lightBlue,
-                                       imageColor: Color.mediumBlue)
-                    }
-                    .frame(maxWidth: .infinity)
-                    
-                    HStack(alignment: .center, spacing: 16) {
-                        ProfileSegment(image: "circle.grid.cross.left.filled",
-                                       title: "Certificates",
-                                       backgroundColor: Color.lightAppPink,
-                                       imageColor: Color.appPink)
-                        
-                        ProfileSegment(image: "circle.grid.cross.down.filled",
-                                       title: "Test",
-                                       backgroundColor: Color.lightYellow,
-                                       imageColor: Color.mediumYellow)
-                    }
-                    .frame(maxWidth: .infinity)
-                    
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .center, spacing: 16) {
+                Text("\(user?.fullname ?? "")")
+                    .font(.h7)
+                    .foregroundColor(.gray2)
+
+                Image(systemName: "person")
+                    .frame(width: 130, height: 130)
+                    .background(Color.lightPurple)
+                    .clipShape(Circle())
+
+                Text(user?.bio ?? "")
+                    .font(.body14SemiBold)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color.gray2)
+                    .padding(.bottom, 8)
+
+                aboutContent
+                    .padding(.bottom, 16)
+                
+                HStack(alignment: .center, spacing: 16) {
+                    ProfileSegment(image: "circle.grid.cross.up.filled",
+                                   title: "Resume",
+                                   backgroundColor: Color.lightPeach,
+                                   imageColor: Color.mediumPeach)
+
+                    ProfileSegment(image: "circle.grid.cross.right.filled",
+                                   title: "Education",
+                                   backgroundColor: Color.lightBlue,
+                                   imageColor: Color.mediumBlue)
                 }
-                .padding([.top, .horizontal], 24)
+                .frame(maxWidth: .infinity)
+
+                HStack(alignment: .center, spacing: 16) {
+                    ProfileSegment(image: "circle.grid.cross.left.filled",
+                                   title: "Certificates",
+                                   backgroundColor: Color.lightAppPink,
+                                   imageColor: Color.appPink)
+
+                    ProfileSegment(image: "circle.grid.cross.down.filled",
+                                   title: "Test",
+                                   backgroundColor: Color.lightYellow,
+                                   imageColor: Color.mediumYellow)
+                }
+                .frame(maxWidth: .infinity)
+                
             }
+            .padding(.all, 24)
+        }
+        .onAppear {
+            user = viewModel.allUsers.first(where: { $0.id == id })
         }
     }
     
@@ -74,15 +77,17 @@ struct PublicProfileView: View {
             Text("About")
                 .font(.body18SemiBold)
                 .foregroundColor(.gray2)
-            
+
             HStack(alignment: .center, spacing: 16) {
                 VStack(alignment: .center, spacing: 2) {
                     Text("Age")
                         .font(.body14SemiBold)
                         .foregroundColor(.white)
-                    Text("24")
-                        .font(.caption12)
-                        .foregroundColor(.white)
+                    if let age = user?.age {
+                        Text("\(age)")
+                            .font(.caption12)
+                            .foregroundColor(.white)
+                    }
                 }
                 .padding(.vertical, 4)
                 .padding(.horizontal, 8)
@@ -95,7 +100,7 @@ struct PublicProfileView: View {
                     Text("Location")
                         .font(.body14SemiBold)
                         .foregroundColor(.white)
-                    Text("Durban North")
+                    Text(user?.location ?? "N/A")
                         .font(.caption12)
                         .foregroundColor(.white)
                 }
@@ -106,12 +111,12 @@ struct PublicProfileView: View {
                     RoundedRectangle(cornerRadius: 16)
                         .fill(Color.darkPurple)
                 )
-                
+
                 VStack(alignment: .center, spacing: 2) {
                     Text("Experience")
                         .font(.body14SemiBold)
                         .foregroundColor(.white)
-                    Text("1 year")
+                    Text(user?.yearsOfExperience ?? "N/A")
                         .font(.caption12)
                         .foregroundColor(.white)
                 }
