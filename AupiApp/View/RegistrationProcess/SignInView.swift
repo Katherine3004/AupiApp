@@ -118,6 +118,7 @@ struct SignInView: View {
                             .font(.caption12Medium)
                             .foregroundColor(.gray2)
                     }
+                    .padding(.bottom, 24)
                 }
             }
             .padding(.horizontal, 24)

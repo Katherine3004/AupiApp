@@ -117,6 +117,29 @@ class AuthenticationViewModel: ObservableObject {
                 return
             }
             
+//            if let profileImage = profileImage {
+//                let storageRef = Storage.storage().reference().child("profileImages/\(uid).jpg")
+//                if let imageData = profileImage.jpegData(compressionQuality: 0.5) {
+//                    let uploadTask = storageRef.putData(imageData, metadata: nil) { metadata, error in
+//                        if let error = error {
+//                            print("DEBUG: Error uploading profile image: \(error.localizedDescription)")
+//                        } else {
+//                            storageRef.downloadURL { url, error in
+//                                if let downloadURL = url {
+//                                    Firestore.firestore().collection("user").document(uid).updateData(["profileImageURL": downloadURL.absoluteString])
+//                                } else if let error = error {
+//                                    print("DEBUG: Error getting profile image URL: \(error.localizedDescription)")
+//                                }
+//                            }
+//                        }
+//                    }
+//
+//                    uploadTask.observe(.progress) { snapshot in
+//                        // You can add progress updates here if needed.
+//                    }
+//                }
+//            }
+            
             if let profileImage = profileImage {
                 let storageRef = Storage.storage().reference().child("profileImages/\(uid).jpg")
                 if let imageData = profileImage.jpegData(compressionQuality: 0.5) {

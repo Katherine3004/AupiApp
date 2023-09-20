@@ -20,17 +20,26 @@ class ProfileCoordinator: NSObject, Coordinator, UINavigationControllerDelegate,
     
     func start() {
         navigationController.delegate = self
-        let vc = UIHostingController(rootView: ProfileView())
+        let vc = UIHostingController(rootView: ProfileView(coordinator: self))
         vc.tabBarItem = UITabBarItem(title: "Account",
                                      image: UIImage(systemName: "person.crop.circle")?.withRenderingMode(.alwaysOriginal),
                                      selectedImage: UIImage(systemName: "person.crop.circle.fill")?.withRenderingMode(.alwaysOriginal))
         navigationController.pushViewController(vc, animated: false)
     }
     
+    //Settings
+    func showSettings() {
+        let vc = UIHostingController(rootView: SettingsView())
+        vc.hidesBottomBarWhenPushed = true
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    //Pop view
     func popView() {
         navigationController.dismiss(animated: true, completion: nil)
     }
     
+    //Dismiss
     func dismissView() {
         navigationController.dismiss(animated: true, completion: nil)
     }

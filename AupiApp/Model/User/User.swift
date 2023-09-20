@@ -20,6 +20,7 @@ struct User: Identifiable, Codable {
     let imageURL: String?
     let bio: String?
     let yearsOfExperience: String?
+    let profilePictureUrlString: String?
     
     init(id: String,
          firstname: String,
@@ -31,7 +32,8 @@ struct User: Identifiable, Codable {
          location: String? = nil,
          imageURL: String? = nil,
          bio: String? = nil,
-         yearsOfExperience: String? = nil
+         yearsOfExperience: String? = nil,
+         profilePictureUrlString: String? = nil
     ) {
         self.id = id
         self.firstname = firstname
@@ -44,6 +46,7 @@ struct User: Identifiable, Codable {
         self.imageURL = imageURL
         self.bio = bio
         self.yearsOfExperience = yearsOfExperience
+        self.profilePictureUrlString = profilePictureUrlString
     }
     
     var initials: String {

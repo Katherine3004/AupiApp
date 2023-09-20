@@ -42,12 +42,14 @@ struct PublicProfileView: View {
                     ProfileSegment(image: "circle.grid.cross.up.filled",
                                    title: "Resume",
                                    backgroundColor: Color.lightPeach,
-                                   imageColor: Color.mediumPeach)
+                                   imageColor: Color.mediumPeach) {
+                        
+                    }
 
                     ProfileSegment(image: "circle.grid.cross.right.filled",
                                    title: "Education",
                                    backgroundColor: Color.lightBlue,
-                                   imageColor: Color.mediumBlue)
+                                   imageColor: Color.mediumBlue) {}
                 }
                 .frame(maxWidth: .infinity)
 
@@ -55,12 +57,12 @@ struct PublicProfileView: View {
                     ProfileSegment(image: "circle.grid.cross.left.filled",
                                    title: "Certificates",
                                    backgroundColor: Color.lightAppPink,
-                                   imageColor: Color.appPink)
+                                   imageColor: Color.appPink) {}
 
                     ProfileSegment(image: "circle.grid.cross.down.filled",
                                    title: "Test",
                                    backgroundColor: Color.lightYellow,
-                                   imageColor: Color.mediumYellow)
+                                   imageColor: Color.mediumYellow) {}
                 }
                 .frame(maxWidth: .infinity)
                 
@@ -145,27 +147,33 @@ struct ProfileSegment: View {
     let title: String
     let backgroundColor: Color
     let imageColor: Color
+    let onTap: () -> ()
     
     var body: some View {
-        VStack(alignment: .center, spacing: 8) {
-            ZStack(alignment: .center) {
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(.white)
-                    .frame(width: 48, height: 48)
-                Image(systemName: image)
-                    .resizable()
-                    .foregroundColor(imageColor)
-                    .frame(width: 24, height: 24)
+        Button(action: {
+            onTap()
+        }, label: {
+            VStack(alignment: .center, spacing: 8) {
+                ZStack(alignment: .center) {
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(.white)
+                        .frame(width: 48, height: 48)
+                    Image(systemName: image)
+                        .resizable()
+                        .foregroundColor(imageColor)
+                        .frame(width: 24, height: 24)
+                }
+                
+                Text(title)
+                    .font(.body14SemiBold)
             }
-            
-            Text(title)
-                .font(.body14SemiBold)
-        }
-        .frame(width: (UIScreen.main.bounds.width / 2) - 32, height: (UIScreen.main.bounds.width / 2) - 32)
-        .background(
-            RoundedRectangle(cornerRadius: 24)
-                .fill(backgroundColor)
-        )
+            .frame(width: (UIScreen.main.bounds.width / 2) - 32, height: (UIScreen.main.bounds.width / 2) - 32)
+            .background(
+                RoundedRectangle(cornerRadius: 24)
+                    .fill(backgroundColor)
+            )
+        })
+        .buttonStyle(PlainButtonStyle())
     }
 }
 

@@ -49,6 +49,9 @@
 		CC7EB9392A8C01C100461665 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7EB9382A8C01C100461665 /* HomeCoordinator.swift */; };
 		CC7EB93B2A8C02BD00461665 /* ChatCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7EB93A2A8C02BD00461665 /* ChatCoordinator.swift */; };
 		CC7EB93D2A8C02E700461665 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7EB93C2A8C02E700461665 /* ProfileCoordinator.swift */; };
+		CC8F55472AAA59EF00C6918C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F55462AAA59EF00C6918C /* SettingsView.swift */; };
+		CC8F554C2AAA615400C6918C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F554B2AAA615400C6918C /* ImagePicker.swift */; };
+		CC8F554F2AAA69C200C6918C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CC8F554E2AAA69C200C6918C /* Kingfisher */; };
 		CC8F9B362A85696E003847DD /* TwoButtonDialogBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F9B352A85696E003847DD /* TwoButtonDialogBox.swift */; };
 		CC8F9B382A856CB2003847DD /* ModalContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F9B372A856CB2003847DD /* ModalContainer.swift */; };
 		CC8F9B3A2A856CDD003847DD /* OneButtonDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F9B392A856CDD003847DD /* OneButtonDialog.swift */; };
@@ -118,6 +121,8 @@
 		CC7EB9382A8C01C100461665 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		CC7EB93A2A8C02BD00461665 /* ChatCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCoordinator.swift; sourceTree = "<group>"; };
 		CC7EB93C2A8C02E700461665 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		CC8F55462AAA59EF00C6918C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CC8F554B2AAA615400C6918C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CC8F9B352A85696E003847DD /* TwoButtonDialogBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonDialogBox.swift; sourceTree = "<group>"; };
 		CC8F9B372A856CB2003847DD /* ModalContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalContainer.swift; sourceTree = "<group>"; };
 		CC8F9B392A856CDD003847DD /* OneButtonDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneButtonDialog.swift; sourceTree = "<group>"; };
@@ -140,6 +145,7 @@
 				CC7ABC8B2A68633E005EB971 /* FirebaseFirestoreSwift in Frameworks */,
 				CC7ABC932A68633E005EB971 /* FirebaseStorage in Frameworks */,
 				CC7ABC872A68633E005EB971 /* FirebaseDatabaseSwift in Frameworks */,
+				CC8F554F2AAA69C200C6918C /* Kingfisher in Frameworks */,
 				CC7ABC8F2A68633E005EB971 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				CC7ABC892A68633E005EB971 /* FirebaseFirestore in Frameworks */,
 				CC7ABC852A68633E005EB971 /* FirebaseDatabase in Frameworks */,
@@ -340,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				CC7ABC712A68619D005EB971 /* ProfileView.swift */,
+				CC8F55462AAA59EF00C6918C /* SettingsView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -391,6 +398,7 @@
 		CC7ABC992A686839005EB971 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				CC8F554A2AAA614700C6918C /* ImagePicker */,
 				CCA98B962A9D1C97003CCF97 /* SettingsRow */,
 				CC6624092A8EB20000DFAFA6 /* TabBar */,
 				CC6624062A8E8E5D00DFAFA6 /* SearchBar */,
@@ -448,6 +456,14 @@
 				CC7EB9362A8BFD7C00461665 /* AppTabController.swift */,
 			);
 			path = TabController;
+			sourceTree = "<group>";
+		};
+		CC8F554A2AAA614700C6918C /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				CC8F554B2AAA615400C6918C /* ImagePicker.swift */,
+			);
+			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 		CC8F9B342A856954003847DD /* DialogBox */ = {
@@ -534,6 +550,7 @@
 				CC7ABC8E2A68633E005EB971 /* FirebaseInAppMessagingSwift-Beta */,
 				CC7ABC902A68633E005EB971 /* FirebaseMessaging */,
 				CC7ABC922A68633E005EB971 /* FirebaseStorage */,
+				CC8F554E2AAA69C200C6918C /* Kingfisher */,
 			);
 			productName = AupiApp;
 			productReference = CC7ABC2F2A685FC7005EB971 /* AupiApp.app */;
@@ -609,6 +626,7 @@
 			mainGroup = CC7ABC262A685FC7005EB971;
 			packageReferences = (
 				CC7ABC812A68633E005EB971 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CC8F554D2AAA69C100C6918C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = CC7ABC302A685FC7005EB971 /* Products */;
 			projectDirPath = "";
@@ -657,6 +675,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC8F55472AAA59EF00C6918C /* SettingsView.swift in Sources */,
 				CC7ABC6E2A686188005EB971 /* SignInView.swift in Sources */,
 				CC7EB9372A8BFD7C00461665 /* AppTabController.swift in Sources */,
 				CC7ABC772A6861BE005EB971 /* ChatLandingView.swift in Sources */,
@@ -677,6 +696,7 @@
 				CC7ABC752A6861B0005EB971 /* HomeView.swift in Sources */,
 				CC6624082A8E8FA000DFAFA6 /* SearchBar.swift in Sources */,
 				CC7EB93B2A8C02BD00461665 /* ChatCoordinator.swift in Sources */,
+				CC8F554C2AAA615400C6918C /* ImagePicker.swift in Sources */,
 				CC7ABC7D2A68622C005EB971 /* AuthenticationViewModel.swift in Sources */,
 				CCA8D9AF2A6F089200DB9451 /* RoundedCorners.swift in Sources */,
 				CC7ABCA82A686CE6005EB971 /* Colors.swift in Sources */,
@@ -1050,6 +1070,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		CC8F554D2AAA69C100C6918C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1097,6 +1125,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CC7ABC812A68633E005EB971 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		CC8F554E2AAA69C200C6918C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC8F554D2AAA69C100C6918C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

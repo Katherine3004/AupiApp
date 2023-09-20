@@ -109,6 +109,7 @@ struct RegisterView: View {
                           .foregroundColor(.gray2)
                   }
                   .frame(maxWidth: .infinity, alignment: .center)
+                  .padding(.bottom, 24)
               })
             }
             .padding(.horizontal, 24)
